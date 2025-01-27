@@ -1,0 +1,200 @@
+/* 이미지 캐러셀 #owl-one */
+#owl-one {
+  width: 100%;
+  height: 650px;
+  margin: 0 auto;
+  position: relative; /* dots 배치를 위해 */
+}
+#owl-one .item img {
+  height: 650px;
+  object-fit: cover;
+  object-position: center;
+}
+#owl-one .owl-dots {
+  position: absolute;
+  top: 50%;
+  left: 24px;
+  transform: translateY(-60%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  z-index: 10;
+  outline: none;
+}
+#owl-one .active span {
+  width: 10px;
+  height: 10px;
+  margin: 5px 7px;
+  background: #2caeff !important;
+  display: block;
+  -webkit-backface-visibility: visible;
+  -webkit-transition: opacity 200ms ease;
+  -moz-transition: opacity 200ms ease;
+  -ms-transition: opacity 200ms ease;
+  -o-transition: opacity 200ms ease;
+  transition: opacity 200ms ease;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  outline: none;
+}
+/* 후원 영역 */
+.donation-form {
+  width: 1220px;
+  height: 200px;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 5px 5px 15px -7px rgba(0, 0, 0, 0.25);
+  padding: 30px 40px;
+  position: relative;
+  margin: 0 auto;
+  top: -78px;
+  z-index: 100;
+}
+.donation-amount {
+  width: 905px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+#donation-type {
+  width: 200px;
+  height: 50px;
+  padding-left: 50px;
+  line-height: 50px;
+  font-family: "Freesentation-7Bold", sans-serif;
+  font-size: 20px;
+  color: #2caeff;
+  outline: none;
+  -webkit-appearance: none; /* 크롬 화살표 없애기 */
+  -moz-appearance: none; /* 파이어폭스 화살표 없애기 */
+  appearance: none; /* 화살표 없애기 */
+  border: 1px solid #2caeff;
+  border-radius: 25px;
+  cursor: pointer;
+  background: url(../img/selectMore.png) no-repeat 90% 50%;
+}
+#donation-type option {
+  font-family: "Freesentation-4Regular", sans-serif;
+  color: #000;
+  font-size: 16px;
+}
+.amount-btn {
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 25px;
+  border: 1px solid #d9d9d9;
+  font-family: "Freesentation-4Regular", sans-serif;
+  color: #7a7a7a;
+  font-size: 20px;
+  cursor: pointer;
+}
+.amount-btn:hover {
+  border: 1px solid #2caeff;
+  color: #2caeff;
+}
+.amount-btn.active {
+  border: 1px solid #2caeff;
+  background-color: #2caeff;
+  color: #fff;
+  font-family: "Freesentation-7Bold", sans-serif;
+}
+.custom-amount {
+  width: 905px;
+  height: 50px;
+  margin-top: 40px;
+  position: relative;
+}
+.amount-title {
+  font-family: "Freesentation-4Regular", sans-serif;
+  color: #7a7a7a;
+  font-size: 20px;
+  position: absolute;
+  left: 51px;
+  line-height: 50px;
+}
+.amount-title:after {
+  content: "|";
+  color: #d9d9d9;
+  padding-left: 51px;
+  font-size: 24px;
+}
+#custom-amount {
+  width: 905px;
+  height: 50px;
+  padding-left: 250px;
+  padding-right: 50px;
+  border: 1px solid #d9d9d9;
+  border-radius: 25px;
+  outline: none;
+  font-family: "Freesentation-4Regular", sans-serif;
+  color: #7a7a7a;
+  font-size: 20px;
+}
+.custom-amount span {
+  position: absolute;
+  font-family: "Freesentation-4Regular", sans-serif;
+  color: #7a7a7a;
+  font-size: 20px;
+  right: 25px;
+  line-height: 50px;
+}
+.actions {
+  width: 200px;
+  height: 140px;
+  position: absolute;
+  right: 40px;
+  top: 30px;
+}
+.donate-btn {
+  width: 200px;
+  height: 50px;
+  border: 1px solid #2caeff;
+  background-color: #2caeff;
+  color: #fff;
+  font-family: "Freesentation-7Bold", sans-serif;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 25px;
+  font-size: 20px;
+  cursor: pointer;
+  margin-bottom: 40px;
+}
+.donate-btn:hover {
+  background-color: #10a1fc;
+}
+.inquiry-btn {
+  width: 200px;
+  height: 50px;
+  border: 1px solid #2caeff;
+  background-color: #fff;
+  color: #2caeff;
+  font-family: "Freesentation-7Bold", sans-serif;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 25px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.inquiry-btn:hover {
+  background-color: #ececec;
+}
+/* 섹션 1: 유니세프 소개 섹션 */
+#aboutUnicef {
+  height: 100vh;
+  margin-top: 32px;
+}
+
+/* 섹션 2: */
+#peopleStory {
+  height: 100vh;
+}
+
+/* 섹션 3: */
+#commuCamp {
+  height: 100vh;
+}

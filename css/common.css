@@ -1,7 +1,368 @@
+/* 폰트 */
 @font-face {
-  font-family: "Freesentation-9Black";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-9Black.woff2")
-    format("woff2");
-  font-weight: 900;
-  font-style: normal;
+  font-family: "Freesentation-4Regular";
+  src: url("../fonts/Freesentation-4Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Freesentation-7Bold";
+  src: url("../fonts/Freesentation-7Bold.ttf") format("truetype");
+}
+/* 공통 CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Freesentation-4Regular", sans-serif;
+  color: #000;
+  background-color: #fff;
+}
+a {
+  color: #7a7a7a;
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+.wrap {
+  width: 1220px;
+  margin: 0 auto;
+}
+.articleTitle {
+  font-family: "Freesentation-7Bold", sans-serif;
+  font-size: 40px;
+  color: #000;
+}
+
+/* input number 화살표 없애기 */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox  */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* view more */
+.viewMore {
+  display: block;
+  width: 110px;
+  height: 23px;
+  position: relative;
+}
+.more {
+  font-family: "Freesentation-7Bold", sans-serif;
+  font-size: 14px;
+  color: #2caeff;
+  position: absolute;
+  left: 2px;
+  top: 0;
+}
+.rarrow {
+  width: 110px;
+  height: 18px;
+  position: absolute;
+  right: 0;
+  bottom: -2px;
+  text-indent: -9999px;
+  background: url(../img/rarrow.png) no-repeat;
+}
+
+/* PC 헤더 */
+/* #upperHeader */
+#upperHeader {
+  width: 100%;
+  height: 30px;
+  background-color: #2caeff;
+}
+.upMenu {
+  float: right;
+}
+.upMenu li {
+  float: left;
+  margin-top: 5px;
+}
+.upMenu li:after {
+  content: "|";
+  padding: 0 5px;
+  font-size: 14px;
+  color: #ececec;
+}
+.upMenu li:last-of-type:after {
+  content: "";
+  display: none;
+}
+.upMenu a {
+  font-size: 14px;
+  color: #ececec;
+}
+/* #mainHeader */
+#mainHeader {
+  width: 100%;
+  height: 100px;
+  background-color: #fff;
+  z-index: 1000;
+}
+.headerWrap {
+  position: relative;
+}
+.logo {
+  width: 130px;
+  height: 80px;
+  margin-top: 14px;
+}
+.logo img {
+  width: 130px;
+  height: 80px;
+}
+.menu {
+  position: absolute;
+  left: 363px;
+  top: 30px;
+}
+.navi > li {
+  float: left;
+  padding-right: 52px;
+  position: relative;
+}
+.navi > li > a {
+  font-family: "Freesentation-7Bold", sans-serif;
+  font-size: 20px;
+  color: #000;
+  display: block;
+  padding: 2px 8px;
+  text-align: center;
+}
+.navi > li > a:hover {
+  /* 질문: 서브메뉴에 올라갔을 때에도 호버 효과 내려면? */
+  color: #2caeff;
+  border-bottom: 1.5px solid #2caeff;
+}
+.subMenu {
+  position: absolute;
+  top: 36px;
+  left: -48px;
+  width: 600px;
+
+  display: none;
+}
+.subMenu li {
+  float: left;
+  padding-right: 16px;
+}
+.subMenu a:hover {
+  font-family: "Freesentation-7Bold", sans-serif;
+  color: #2caeff;
+}
+/* .supportHeader: 메모) 스크롤 다운 시 나타난다 */
+.supportHeader {
+  font-family: "Freesentation-7Bold", sans-serif;
+  font-size: 20px;
+  color: #fff;
+  width: 120px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  background-color: #2caeff;
+  border-radius: 20px;
+  position: absolute;
+  right: 0;
+  top: 24px;
+}
+.supportHeader:hover {
+  background-color: #10a1fc;
+}
+/* 뉴스레터 섹션 */
+#newsletter {
+  width: 100%;
+  height: 160px;
+  background-color: #2caeff;
+}
+.newsletterContents {
+  height: 160px;
+  position: relative;
+}
+.newsletterContents h3 {
+  font-family: "Freesentation-7Bold", sans-serif;
+  font-size: 32px;
+  color: #fff;
+  position: absolute;
+  left: 0;
+  top: 25px;
+}
+.newsletterContents p {
+  font-size: 14px;
+  color: #fff;
+  position: absolute;
+  left: 501px;
+  top: 37px;
+}
+#readerName {
+  width: 115px;
+  height: 35px;
+  border: none;
+  border-radius: 17.5px;
+  outline: none;
+  background-color: #fff;
+  text-align: center;
+  line-height: 35px;
+  font-family: "Freesentation-4Regular", sans-serif;
+  color: #7a7a7a;
+  position: absolute;
+  left: 0;
+  bottom: 30px;
+}
+#readerEMail {
+  width: 280px;
+  height: 35px;
+  border: none;
+  border-radius: 17.5px;
+  outline: none;
+  background-color: #fff;
+  text-align: center;
+  line-height: 35px;
+  font-family: "Freesentation-4Regular", sans-serif;
+  color: #7a7a7a;
+  position: absolute;
+  left: 132px;
+  bottom: 30px;
+}
+.subscribe {
+  width: 115px;
+  height: 35px;
+  background-color: #fff;
+  border: none;
+  border-radius: 17.5px;
+  outline: none;
+  cursor: pointer;
+  font-family: "Freesentation-7Bold", sans-serif;
+  color: #2caeff;
+  position: absolute;
+  left: 445px;
+  bottom: 30px;
+}
+.subscribe:hover {
+  background-color: #ececec;
+}
+.sns {
+  position: absolute;
+  right: 0;
+  bottom: 30px;
+}
+.sns li {
+  display: inline-block;
+  margin-left: 30px;
+}
+/* 푸터 */
+footer {
+  width: 100%;
+  height: 223px;
+  background-color: #fff;
+}
+.footerContents {
+  height: 223px;
+  position: relative;
+}
+.siteMenu {
+  position: absolute;
+  left: 0;
+  top: 50px;
+}
+.siteMenu li {
+  float: left;
+}
+.siteMenu li:after {
+  content: "|";
+  font-family: "Freesentation-4Regular", sans-serif;
+  color: #7a7a7a;
+  padding: 0 5px;
+}
+.siteMenu li:last-child:after {
+  content: "";
+  display: none;
+}
+.call1 {
+  width: 215px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-family: "Freesentation-4Regular", sans-serif;
+  color: #7a7a7a;
+  border: 1px solid #7a7a7a;
+  border-radius: 15px;
+  position: absolute;
+  left: 361px;
+  top: 45px;
+}
+.call2 {
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-family: "Freesentation-4Regular", sans-serif;
+  color: #7a7a7a;
+  border: 1px solid #7a7a7a;
+  border-radius: 15px;
+  position: absolute;
+  top: 45px;
+  left: 601px;
+  cursor: pointer;
+}
+.info1 {
+  position: absolute;
+  left: 0;
+  top: 105px;
+  color: #7a7a7a;
+}
+.info2 {
+  position: absolute;
+  left: 272px;
+  top: 105px;
+  color: #7a7a7a;
+}
+.info3 {
+  position: absolute;
+  left: 457px;
+  top: 105px;
+  color: #7a7a7a;
+}
+.copy {
+  position: absolute;
+  left: 0;
+  bottom: 48px;
+  color: #7a7a7a;
+}
+.goTop {
+  display: block;
+  width: 50px;
+  height: 130px;
+  border: 1px solid #7a7a7a;
+  border-radius: 25px;
+  position: absolute;
+  right: 0;
+  top: 45px;
+  background-color: #fff;
+}
+.goTop:hover {
+  background-color: #ececec;
+}
+.tarrow {
+  width: 15px;
+  height: 50px;
+  position: absolute;
+  top: 26px;
+  left: 20px;
+  text-indent: -9999px;
+  background: url(../img/tarrow.png) no-repeat;
+}
+.top {
+  position: absolute;
+  font-family: "Freesentation-7Bold", sans-serif;
+  font-size: 14px;
+  top: 95px;
+  left: 11.5px;
 }

@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project 유니세프</title>
-    <!-- stylesheet -->
+    <!-- stylesheets -->
     <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/main.css" />
     <!-- Owl Carousel을 위한 CSS CDN -->
     <link
       rel="stylesheet"
@@ -26,14 +27,16 @@
     <header>
       <!-- 마이페이지 etc. -->
       <div id="upperHeader">
-        <ul class="upMenu wrap">
-          <li><a href="javascript:void(0)">마이페이지</a></li>
-          <li><a href="javascript:void(0)">기부영수증</a></li>
-          <li><a href="javascript:void(0)">FAQ</a></li>
-        </ul>
+        <div class="wrap">
+          <ul class="upMenu">
+            <li><a href="javascript:void(0)">마이페이지</a></li>
+            <li><a href="javascript:void(0)">기부영수증</a></li>
+            <li><a href="javascript:void(0)">FAQ</a></li>
+          </ul>
+        </div>
       </div>
       <div id="mainHeader">
-        <div class="wrap">
+        <div class="headerWrap wrap">
           <!-- 로고 -->
           <h1 class="logo">
             <a href="index.html"><img src="img/logo.png" alt="logo" /></a>
@@ -82,6 +85,8 @@
               </li>
             </ul>
           </nav>
+          <!-- 후원하기 CTA button -->
+          <a class="supportHeader" href="javascript:void(0)">후원하기</a>
         </div>
       </div>
     </header>
@@ -94,7 +99,7 @@
       </div>
       <div class="item">
         <a href="javascript:void(0)"
-          ><img src="img/slide_2.jpg" alt="slide2"
+          ><img src="img/slide_2.png" alt="slide2"
         /></a>
       </div>
       <div class="item">
@@ -104,18 +109,46 @@
       </div>
       <div class="item">
         <a href="javascript:void(0)"
-          ><img src="img/slide_4.jpg" alt="slide4"
+          ><img src="img/slide_4.png" alt="slide4"
         /></a>
       </div>
     </div>
     <!-- 후원 영역 -->
-    <div id="supportSection" class="wrap"></div>
+    <div class="donation-form">
+      <div class="donation-amount">
+        <select name="donation-type" id="donation-type">
+          <option value="regular">정기 후원</option>
+          <option value="one-time">일시 후원</option>
+        </select>
+
+        <button type="button" class="amount-btn active" data-value="30000">
+          30,000 원
+        </button>
+        <button type="button" class="amount-btn" data-value="50000">
+          50,000 원
+        </button>
+        <button type="button" class="amount-btn" data-value="100000">
+          100,000 원
+        </button>
+      </div>
+
+      <div class="custom-amount">
+        <div class="amount-title">금액 직접 입력</div>
+        <input type="number" id="custom-amount" name="custom-amount" />
+        <span>원</span>
+      </div>
+
+      <div class="actions">
+        <button type="submit" class="donate-btn">후원하기</button>
+        <button type="button" class="inquiry-btn">문의하기</button>
+      </div>
+    </div>
     <!-- 섹션 1: 유니세프 소개 섹션 (높이 가득 차게) -->
     <section id="aboutUnicef" class="wrap">
       <!-- 이미지 소개 -->
       <div class="aboutByImg">
         <h2 class="articleTitle">UN공식기관 유니세프</h2>
-        <a class="viewMore" href="javascript:void(0)"
+        <a class="viewMore aboutMore" href="javascript:void(0)"
           ><div class="more">자세히 보기</div>
           <div class="rarrow">rarrow</div></a
         >
@@ -301,7 +334,32 @@
           ><div class="more">자세히 보기</div>
           <div class="rarrow">rarrow</div></a
         >
-        <div class="peopleImg"></div>
+        <div class="peopleImgs">
+          <a class="personImg" href="javascript:void(0)">
+            <div class="circlePeople">
+              <img src="img/TH_KHS.png" alt="KHS" />
+            </div>
+            <div class="personText">김혜수 친선대사</div>
+          </a>
+          <a class="personImg" href="javascript:void(0)">
+            <div class="circlePeople">
+              <img src="img/TH_ASK.png" alt="ASK" />
+            </div>
+            <div class="personText">안성기 친선대사</div>
+          </a>
+          <a class="personImg" href="javascript:void(0)">
+            <div class="circlePeople">
+              <img src="img/TH_LBY.png" alt="LBY" />
+            </div>
+            <div class="personText">이보영 친선대사</div>
+          </a>
+          <a class="personImg" href="javascript:void(0)">
+            <div class="circlePeople">
+              <img src="img/TH_JS.png" alt="JS" />
+            </div>
+            <div class="personText">지성 친선대사</div>
+          </a>
+        </div>
       </div>
       <!-- 후원자 이야기 -->
       <div class="patronStory">
@@ -310,7 +368,32 @@
           ><div class="more">자세히 보기</div>
           <div class="rarrow">rarrow</div></a
         >
-        <div class="stories"></div>
+        <div class="stories">
+          <a class="storyCard" href="javascript:void(0)">
+            <div class="cardDate">2025년 01월 12일</div>
+            <div class="cardTitle">캄보디아 여행이 바꾼<br />나의 일상</div>
+            <div class="cardWriter">김샛별 후원자님</div>
+          </a>
+          <a class="storyCard" href="javascript:void(0)">
+            <div class="cardDate">2024년 12월 26일</div>
+            <div class="cardTitle">
+              일흔둘,<br />다시 일하는 기쁨과<br />감사를 담아
+            </div>
+            <div class="cardWriter">이영상 후원자님</div>
+          </a>
+          <a class="storyCard" href="javascript:void(0)">
+            <div class="cardDate">2025년 12월 03일</div>
+            <div class="cardTitle">귀농생활의 씨앗이자<br />열매가 된 기부</div>
+            <div class="cardWriter">정다운 후원자님</div>
+          </a>
+          <a class="storyCard" href="javascript:void(0)">
+            <div class="cardDate">2025년 11월 19일</div>
+            <div class="cardTitle">
+              'BTS'로 시작한 후원,<br />후원금 쓰인 곳 알게 될 때<br />행복해져
+            </div>
+            <div class="cardWriter">우지민 후원자님</div>
+          </a>
+        </div>
       </div>
     </section>
     <!-- 섹션 3: 커뮤니티와 캠페인 섹션 (너비 건드리지 아니함, 높이 가득 차게) -->
@@ -327,10 +410,41 @@
             <a href="javascript:void(0)">뉴스</a>
             <div class="commuContents">
               <ul>
-                <li><a href="javascript:void(0)"></a></li>
-                <li><a href="javascript:void(0)"></a></li>
-                <li><a href="javascript:void(0)"></a></li>
-                <li><a href="javascript:void(0)"></a></li>
+                <li>
+                  <a href="javascript:void(0)">
+                    <div class="commuDate">2024.12.30</div>
+                    <div class="commuTitle">
+                      '뉴노멀이 아닙니다'<br />- 2024년, 분쟁으로 얼룩진<br />유니세프
+                      역사상 최악의 시기
+                    </div>
+                    <div class="commuTag">#인도주의지원</div>
+                    <div class="commuTag">#안전한환경</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)">
+                    <div class="commuDate">2024.12.23</div>
+                    <div class="commuTitle">2025 새해 인사</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)">
+                    <div class="commuDate">2024.12.19</div>
+                    <div class="commuTitle">
+                      바누아투, 지진으로<br />어린이 4만 명 위기에 처해
+                    </div>
+                    <div class="commuTag">#인도주의지원</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)">
+                    <div class="commuDate">2024.12.18</div>
+                    <div class="commuTitle">
+                      사이클론 치도로<br />모잠비크 어린이 최소 9만 명 피해
+                    </div>
+                    <div class="commuTag">#인도주의지원</div>
+                  </a>
+                </li>
               </ul>
             </div>
           </li>
@@ -394,8 +508,12 @@
                 <img src="img/bn_1.jpg" alt="cp1" />
               </div>
               <div class="campaignInfo">
-                <div class="campaignStatus"></div>
-                <div class="campaignTitle"></div>
+                <div class="campaignStatus">
+                  진행중<span>2021.10.14 ~ 상시</span>
+                </div>
+                <div class="campaignTitle">
+                  소녀들의 깨끗하고 안전한 생리를 위한 WE=SHE 캠페인
+                </div>
               </div>
             </a>
             <a href="javascript:void(0)" class="campaignCard">
@@ -403,8 +521,10 @@
                 <img src="img/bn_2.png" alt="cp2" />
               </div>
               <div class="campaignInfo">
-                <div class="campaignStatus"></div>
-                <div class="campaignTitle"></div>
+                <div class="campaignStatus">
+                  진행중<span>2022.09.23 ~ 상시</span>
+                </div>
+                <div class="campaignTitle">동아프리카 영양실조 어린이 돕기</div>
               </div>
             </a>
             <a href="javascript:void(0)" class="campaignCard">
@@ -412,8 +532,12 @@
                 <img src="img/bn_3.png" alt="cp3" />
               </div>
               <div class="campaignInfo">
-                <div class="campaignStatus"></div>
-                <div class="campaignTitle"></div>
+                <div class="campaignStatus">
+                  진행중<span>2022.12.02 ~ 상시</span>
+                </div>
+                <div class="campaignTitle">
+                  [가자 지구 긴급구호] 참혹한 분쟁 속 무구한 어린이를 도와주세요
+                </div>
               </div>
             </a>
             <a href="javascript:void(0)" class="campaignCard">
@@ -421,8 +545,12 @@
                 <img src="img/bn_4.jpg" alt="cp4" />
               </div>
               <div class="campaignInfo">
-                <div class="campaignStatus"></div>
-                <div class="campaignTitle"></div>
+                <div class="campaignStatus">
+                  진행중<span>2024.08.13 ~ 상시</span>
+                </div>
+                <div class="campaignTitle">
+                  [수단 긴급구호] 최악의 식량난 '기근' 선포, 어린이를 구해주세요
+                </div>
               </div>
             </a>
             <a href="javascript:void(0)" class="campaignCard">
@@ -430,8 +558,10 @@
                 <img src="img/bn_5.jpg" alt="cp5" />
               </div>
               <div class="campaignInfo">
-                <div class="campaignStatus"></div>
-                <div class="campaignTitle"></div>
+                <div class="campaignStatus">
+                  진행중<span>2024.12.23 ~ 상시</span>
+                </div>
+                <div class="campaignTitle">유니세프 팀이니까 가능한 일</div>
               </div>
             </a>
             <a href="javascript:void(0)" class="campaignCard">
@@ -439,8 +569,12 @@
                 <img src="img/bn_6.png" alt="cp6" />
               </div>
               <div class="campaignInfo">
-                <div class="campaignStatus"></div>
-                <div class="campaignTitle"></div>
+                <div class="campaignStatus">
+                  진행중<span>2025.01.10 ~ 상시</span>
+                </div>
+                <div class="campaignTitle">
+                  기부 반지로 유니세프 팀 코리아, 하나가 되다
+                </div>
               </div>
             </a>
           </div>
@@ -456,9 +590,19 @@
           이용·보유합니다.
         </p>
         <form>
-          <input type="text" />
-          <input type="text" />
-          <button>소식 구독하기</button>
+          <input
+            name="readerName"
+            id="readerName"
+            type="text"
+            placeholder="이름 입력"
+          />
+          <input
+            name="readerEMail"
+            id="readerEMail"
+            type="text"
+            placeholder="이메일 입력"
+          />
+          <button class="subscribe">소식 구독하기</button>
         </form>
         <ul class="sns">
           <li>
@@ -492,11 +636,11 @@
           <li><a href="javascript:void(0)">FAQ</a></li>
           <li><a href="javascript:void(0)">사이트맵</a></li>
         </ul>
-        <div class="call">후원문의 02.737.1004</div>
-        <div class="call">공익제보</div>
-        <div class="info">사단법인 유니세프한국위원회 대표자 : 정갑영</div>
-        <div class="info">고유번호 : 102-82-07606</div>
-        <div class="info">[04099] 서울시 마포구 서강로 60 (창전동)</div>
+        <div class="call1">후원문의 02.737.1004</div>
+        <div class="call2">공익제보</div>
+        <div class="info1">사단법인 유니세프한국위원회 대표자 : 정갑영</div>
+        <div class="info2">고유번호 : 102-82-07606</div>
+        <div class="info3">[04099] 서울시 마포구 서강로 60 (창전동)</div>
         <div class="copy">
           COPYRIGHT @ THE KOREAN COMMITTEE FOR UNICEF. ALL RIGHT RESERVED
         </div>
