@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  // 스크롤 다운 시 #upperHeader 안 보이게
+  // PC 스크롤 다운 시 #upperHeader 안 보이게
   let lastScrollTop = 0;
   const $upperHeader = $("#upperHeader");
   const $mainHeader = $("#mainHeader");
@@ -7,24 +7,28 @@ $(document).ready(function () {
 
   $(window).on("scroll", function () {
     const currentScrollTop = $(this).scrollTop();
+    const windowWidth = $(window).width(); // 현재 뷰포트 너비 확인
 
-    // 스크롤 다운 시 upperHeader 사라짐
-    if (currentScrollTop > lastScrollTop) {
-      $upperHeader.stop().slideUp(300);
-      $mainHeader.css("top", "0"); // mainHeader가 맨 위로 이동
-    }
-    // 스크롤 업 시 upperHeader 등장
-    else if (currentScrollTop < lastScrollTop) {
-      if (currentScrollTop === 0) {
-        $upperHeader.stop().slideDown(300);
+    // 1258px 초과에서만 동작
+    if (windowWidth > 1258) {
+      // 스크롤 다운 시 upperHeader 사라짐
+      if (currentScrollTop > lastScrollTop) {
+        $upperHeader.stop().slideUp(300);
+        $mainHeader.css("top", "0"); // mainHeader가 맨 위로 이동
       }
-    }
+      // 스크롤 업 시 upperHeader 등장
+      else if (currentScrollTop < lastScrollTop) {
+        if (currentScrollTop === 0) {
+          $upperHeader.stop().slideDown(300);
+        }
+      }
 
-    // mainHeader fixed
-    if (currentScrollTop > headerHeight) {
-      $mainHeader.addClass("fixed");
-    } else {
-      $mainHeader.removeClass("fixed");
+      // mainHeader fixed
+      if (currentScrollTop > headerHeight) {
+        $mainHeader.addClass("fixed");
+      } else {
+        $mainHeader.removeClass("fixed");
+      }
     }
 
     lastScrollTop = currentScrollTop;

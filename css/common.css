@@ -84,6 +84,9 @@ input[type="number"] {
 }
 
 /* PC 헤더 */
+.burger {
+  display: none;
+}
 /* #upperHeader */
 #upperHeader {
   width: 100%;
@@ -182,7 +185,7 @@ input[type="number"] {
   font-family: "Freesentation-7Bold", sans-serif;
   color: #2caeff;
 }
-/* .supportHeader: 메모) 스크롤 다운 시 나타난다 */
+/* .supportHeader */
 .supportHeader {
   font-family: "Freesentation-7Bold", sans-serif;
   font-size: 20px;
@@ -391,7 +394,162 @@ footer {
   left: 11.5px;
 }
 
-/* 태블릿 */
-/* GNB */
-@media all and (min-width: 480px) and (max-width: 1258px) {
+/* 태블릿 버전 */
+@media all and (min-width: 830px) and (max-width: 1258px) {
+  /* GNB */
+  #upperHeader {
+    display: none;
+  }
+  .headerWrap {
+    position: static;
+  }
+  #mainHeader {
+    position: relative;
+    width: 100%;
+  }
+  .logo {
+    margin-top: 14px;
+    margin-left: 30px;
+  }
+  .menu {
+    display: none;
+  }
+  .supportHeader {
+    position: absolute;
+    top: 26px;
+    right: 90px;
+  }
+  .burger {
+    display: block;
+    position: absolute;
+    right: 32px;
+    top: 26px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+  .burger img {
+    width: 100%;
+  }
+  /* 버거를 누르면 서브메뉴가 뾰로롱 */
+  /* 뉴스레터 */
+  #newsletter {
+    width: 100%;
+    height: 180px;
+  }
+  .newsletterContents {
+    width: 100%;
+    height: 180px;
+    position: relative;
+  }
+  .newsletterContents h3 {
+    font-family: "Freesentation-7Bold", sans-serif;
+    font-size: 32px;
+    color: #fff;
+    position: absolute;
+    left: 90px;
+    top: 25px;
+  }
+  .newsletterContents p {
+    font-size: 14px;
+    color: #fff;
+    position: absolute;
+    left: 90px;
+    top: 70px;
+  }
+  #readerName {
+    position: absolute;
+    left: 90px;
+    bottom: 30px;
+  }
+  #readerEMail {
+    position: absolute;
+    left: 222px;
+    bottom: 30px;
+  }
+  .subscribe {
+    position: absolute;
+    left: 535px;
+    bottom: 30px;
+  }
+  .sns {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+  }
+  .sns li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  /* 푸터 */
+  footer {
+    height: 262px;
+  }
+  .footerContents {
+    width: 100%;
+    height: 262px;
+    position: relative;
+  }
+  .siteMenu {
+    position: absolute;
+    left: 90px;
+    top: 30px;
+  }
+  .siteMenu li {
+    float: left;
+  }
+  .siteMenu li:after {
+    content: "|";
+    font-family: "Freesentation-4Regular", sans-serif;
+    color: #7a7a7a;
+    padding: 0 5px;
+  }
+  .siteMenu li:last-child:after {
+    content: "";
+    display: none;
+  }
+  .call1 {
+    width: 200px;
+    height: 30px;
+    position: absolute;
+    left: 90px;
+    top: 70px;
+  }
+  .call2 {
+    position: absolute;
+    top: 70px;
+    left: 301px;
+  }
+  .info1 {
+    position: absolute;
+    left: 90px;
+    top: 120px;
+  }
+  .info2 {
+    position: absolute;
+    left: 347px;
+    top: 120px;
+  }
+  .info3 {
+    position: absolute;
+    left: 90px;
+    top: 150px;
+  }
+  .copy {
+    position: absolute;
+    left: 90px;
+    bottom: 62px;
+  }
+  .goTop {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+  }
+  .top {
+    position: absolute;
+    font-family: "Freesentation-7Bold", sans-serif;
+    font-size: 14px;
+    top: 95px;
+    left: 11.5px;
+  }
 }

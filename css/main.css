@@ -1,3 +1,6 @@
+#owl-one-tb {
+  display: none;
+}
 /* 이미지 캐러셀 #owl-one */
 #owl-one {
   width: 100%;
@@ -597,4 +600,13 @@
   position: absolute;
   bottom: 25px;
   left: 25px;
+}
+/* 태블릿 버전 */
+@media all and (min-width: 830px) and (max-width: 1258px) {
+  #owl-one {
+    display: none;
+  }
+  #owl-one-tb {
+    display: block;
+  }
 }
