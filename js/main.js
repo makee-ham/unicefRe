@@ -28,7 +28,10 @@ $(document).ready(function () {
   });
 
   // 후원 버튼 클릭 이벤트
-  donateButton.addEventListener("click", () => {
+  donateButton.addEventListener("click", (e) => {
+    // 기본 동작 막기... 우리에겐 서버가 없다...
+    e.preventDefault();
+
     if (!selectedAmount || selectedAmount <= 0) {
       alert("후원 금액을 선택하거나 입력해주세요.");
     } else {
