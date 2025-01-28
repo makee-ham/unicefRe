@@ -45,7 +45,7 @@
           <nav class="menu">
             <ul class="navi">
               <li>
-                <a href="javascript:void(0)">주요 활동</a>
+                <a class="mainMenu" href="javascript:void(0)">주요 활동</a>
                 <ul class="subMenu">
                   <li><a href="javascript:void(0)">활동 지역</a></li>
                   <li><a href="javascript:void(0)">차별 없는 구호</a></li>
@@ -56,7 +56,7 @@
                 </ul>
               </li>
               <li>
-                <a href="javascript:void(0)">후원과 참여</a>
+                <a class="mainMenu" href="javascript:void(0)">후원과 참여</a>
                 <ul class="subMenu">
                   <li><a href="javascript:void(0)">개인이 후원</a></li>
                   <li><a href="javascript:void(0)">단체가 후원</a></li>
@@ -65,7 +65,7 @@
                 </ul>
               </li>
               <li>
-                <a href="javascript:void(0)">유니세프 소개</a>
+                <a class="mainMenu" href="javascript:void(0)">유니세프 소개</a>
                 <ul class="subMenu">
                   <li><a href="javascript:void(0)">유니세프</a></li>
                   <li><a href="javascript:void(0)">투명한 유니세프</a></li>
@@ -73,7 +73,7 @@
                 </ul>
               </li>
               <li>
-                <a href="javascript:void(0)">커뮤니티</a>
+                <a class="mainMenu" href="javascript:void(0)">커뮤니티</a>
                 <ul class="subMenu">
                   <li><a href="javascript:void(0)">소식</a></li>
                   <li><a href="javascript:void(0)">자료실</a></li>
@@ -147,51 +147,63 @@
     <section id="aboutUnicef" class="wrap">
       <!-- 이미지 소개 -->
       <div class="aboutByImg">
-        <h2 class="articleTitle">UN공식기관 유니세프</h2>
+        <h2 class="articleTitle fade-in">UN공식기관 유니세프</h2>
         <a class="viewMore aboutMore" href="javascript:void(0)"
           ><div class="more">자세히 보기</div>
           <div class="rarrow">rarrow</div></a
         >
         <div class="aboutImgs">
           <div class="imgCard">
-            <img src="img/un_5.png" alt="un1" />
-            <p>
+            <div class="cardImg">
+              <img src="img/un_5.png" alt="un1" />
+            </div>
+            <p class="cardText">
               <span>UN 공식 기관</span>으로<br />
               <span>약 80년의 구호 활동 경험과 전문성</span>
             </p>
           </div>
-        </div>
-        <div class="imgCard">
-          <img src="img/un_2.png" alt="un2" />
-          <p>
-            유엔아동권리협약에 직접 명시된<br />
-            <span>유일한 아동권리증진 기관</span>
-          </p>
-        </div>
-      </div>
-      <div class="imgCard">
-        <img src="img/un_4.png" alt="un3" />
-        <p>
-          유니세프 본부 및<br />외부 회계 법인 감사로<br />
-          <span>후원금 사용의 투명성 검증</span>
-        </p>
-      </div>
 
-      <div class="imgCard">
-        <img src="img/un_1.jpg" alt="un4" />
-        <p>
-          2023 대한민국 국가사회산업공헌<br />대상 비영리 기관<br />
-          <span>'세계 어린이 구호' 부문 3년 연속 수상</span>
-        </p>
-      </div>
+          <div class="imgCard">
+            <div class="cardImg">
+              <img src="img/un_2.png" alt="un2" />
+            </div>
+            <p class="cardText">
+              유엔아동권리협약에 직접 명시된<br />
+              <span>유일한 아동권리증진 기관</span>
+            </p>
+          </div>
 
-      <div class="imgCard">
-        <img src="img/un_3.png" alt="un5" />
-        <p>
-          2022년 원조투명성지수 평가<br />
-          <span>2회 연속 최상위 등급</span><br />
-          <span>(Very Good) 획득</span>
-        </p>
+          <div class="imgCard">
+            <div class="cardImg">
+              <img src="img/un_4.png" alt="un3" />
+            </div>
+            <p class="cardText">
+              유니세프 본부 및<br />외부 회계 법인 감사로<br />
+              <span>후원금 사용의 투명성 검증</span>
+            </p>
+          </div>
+
+          <div class="imgCard">
+            <div class="cardImg">
+              <img src="img/un_1.jpg" alt="un4" />
+            </div>
+            <p class="cardText">
+              2023 대한민국 국가사회산업공헌<br />대상 비영리 기관<br />
+              <span>'세계 어린이 구호' 부문 3년 연속 수상</span>
+            </p>
+          </div>
+
+          <div class="imgCard">
+            <div class="cardImg">
+              <img src="img/un_3.png" alt="un5" />
+            </div>
+            <p class="cardText">
+              2022년 원조투명성지수 평가<br />
+              <span>2회 연속 최상위 등급</span><br />
+              <span>(Very Good) 획득</span>
+            </p>
+          </div>
+        </div>
       </div>
 
       <!-- 성과 소개 -->
@@ -329,8 +341,8 @@
     <section id="peopleStory" class="wrap">
       <!-- 유니세프와 사람들 -->
       <div class="andPeople">
-        <h2 class="articleTitle">유니세프와 사람들</h2>
-        <a class="viewMore" href="javascript:void(0)"
+        <h2 class="articleTitle fade-in">유니세프와 사람들</h2>
+        <a class="viewMore peopleMore" href="javascript:void(0)"
           ><div class="more">자세히 보기</div>
           <div class="rarrow">rarrow</div></a
         >
@@ -363,8 +375,8 @@
       </div>
       <!-- 후원자 이야기 -->
       <div class="patronStory">
-        <h2 class="articleTitle">후원자 이야기</h2>
-        <a class="viewMore" href="javascript:void(0)"
+        <h2 class="articleTitle fade-in">후원자 이야기</h2>
+        <a class="viewMore storyMore" href="javascript:void(0)"
           ><div class="more">자세히 보기</div>
           <div class="rarrow">rarrow</div></a
         >
@@ -400,49 +412,55 @@
     <section id="commuCamp">
       <!-- 커뮤니티 -->
       <div class="commu wrap">
-        <h2 class="articleTitle">커뮤니티</h2>
-        <a class="viewMore" href="javascript:void(0)"
+        <h2 class="articleTitle fade-in">커뮤니티</h2>
+        <a class="viewMore commuMore" href="javascript:void(0)"
           ><div class="more">자세히 보기</div>
           <div class="rarrow">rarrow</div></a
         >
         <ul class="commuTabs">
-          <li>
+          <li class="active">
             <a href="javascript:void(0)">뉴스</a>
             <div class="commuContents">
               <ul>
                 <li>
-                  <a href="javascript:void(0)">
+                  <a class="commuCard" href="javascript:void(0)">
                     <div class="commuDate">2024.12.30</div>
                     <div class="commuTitle">
                       '뉴노멀이 아닙니다'<br />- 2024년, 분쟁으로 얼룩진<br />유니세프
                       역사상 최악의 시기
                     </div>
-                    <div class="commuTag">#인도주의지원</div>
-                    <div class="commuTag">#안전한환경</div>
+                    <div class="tagSection">
+                      <div class="commuTag">#인도주의지원</div>
+                      <div class="commuTag">#안전한환경</div>
+                    </div>
                   </a>
                 </li>
                 <li>
-                  <a href="javascript:void(0)">
+                  <a class="commuCard" href="javascript:void(0)">
                     <div class="commuDate">2024.12.23</div>
                     <div class="commuTitle">2025 새해 인사</div>
                   </a>
                 </li>
                 <li>
-                  <a href="javascript:void(0)">
+                  <a class="commuCard" href="javascript:void(0)">
                     <div class="commuDate">2024.12.19</div>
                     <div class="commuTitle">
                       바누아투, 지진으로<br />어린이 4만 명 위기에 처해
                     </div>
-                    <div class="commuTag">#인도주의지원</div>
+                    <div class="tagSection">
+                      <div class="commuTag">#인도주의지원</div>
+                    </div>
                   </a>
                 </li>
                 <li>
-                  <a href="javascript:void(0)">
+                  <a class="commuCard" href="javascript:void(0)">
                     <div class="commuDate">2024.12.18</div>
                     <div class="commuTitle">
                       사이클론 치도로<br />모잠비크 어린이 최소 9만 명 피해
                     </div>
-                    <div class="commuTag">#인도주의지원</div>
+                    <div class="tagSection">
+                      <div class="commuTag">#인도주의지원</div>
+                    </div>
                   </a>
                 </li>
               </ul>
@@ -452,10 +470,10 @@
             <a href="javascript:void(0)">공지사항</a>
             <div class="commuContents">
               <ul>
-                <li><a href="javascript:void(0)"></a></li>
-                <li><a href="javascript:void(0)"></a></li>
-                <li><a href="javascript:void(0)"></a></li>
-                <li><a href="javascript:void(0)"></a></li>
+                <li><a class="commuCard" href="javascript:void(0)"></a></li>
+                <li><a class="commuCard" href="javascript:void(0)"></a></li>
+                <li><a class="commuCard" href="javascript:void(0)"></a></li>
+                <li><a class="commuCard" href="javascript:void(0)"></a></li>
               </ul>
             </div>
           </li>
@@ -463,10 +481,10 @@
             <a href="javascript:void(0)">스토리</a>
             <div class="commuContents">
               <ul>
-                <li><a href="javascript:void(0)"></a></li>
-                <li><a href="javascript:void(0)"></a></li>
-                <li><a href="javascript:void(0)"></a></li>
-                <li><a href="javascript:void(0)"></a></li>
+                <li><a class="commuCard" href="javascript:void(0)"></a></li>
+                <li><a class="commuCard" href="javascript:void(0)"></a></li>
+                <li><a class="commuCard" href="javascript:void(0)"></a></li>
+                <li><a class="commuCard" href="javascript:void(0)"></a></li>
               </ul>
             </div>
           </li>
@@ -474,10 +492,10 @@
             <a href="javascript:void(0)">성명</a>
             <div class="commuContents">
               <ul>
-                <li><a href="javascript:void(0)"></a></li>
-                <li><a href="javascript:void(0)"></a></li>
-                <li><a href="javascript:void(0)"></a></li>
-                <li><a href="javascript:void(0)"></a></li>
+                <li><a class="commuCard" href="javascript:void(0)"></a></li>
+                <li><a class="commuCard" href="javascript:void(0)"></a></li>
+                <li><a class="commuCard" href="javascript:void(0)"></a></li>
+                <li><a class="commuCard" href="javascript:void(0)"></a></li>
               </ul>
             </div>
           </li>
@@ -485,10 +503,10 @@
             <a href="javascript:void(0)">후원자 참여</a>
             <div class="commuContents">
               <ul>
-                <li><a href="javascript:void(0)"></a></li>
-                <li><a href="javascript:void(0)"></a></li>
-                <li><a href="javascript:void(0)"></a></li>
-                <li><a href="javascript:void(0)"></a></li>
+                <li><a class="commuCard" href="javascript:void(0)"></a></li>
+                <li><a class="commuCard" href="javascript:void(0)"></a></li>
+                <li><a class="commuCard" href="javascript:void(0)"></a></li>
+                <li><a class="commuCard" href="javascript:void(0)"></a></li>
               </ul>
             </div>
           </li>
@@ -496,88 +514,88 @@
       </div>
       <!-- 진행중인 캠페인 -->
       <div class="campaigns">
-        <h2 class="articleTitle">진행중인 캠페인</h2>
-        <a class="viewMore" href="javascript:void(0)"
+        <h2 class="articleTitle fade-in">진행중인 캠페인</h2>
+        <a class="viewMore campaignMore" href="javascript:void(0)"
           ><div class="more">자세히 보기</div>
           <div class="rarrow">rarrow</div></a
         >
-        <div class="campaignBoardContainer">
-          <div class="campaignBoard">
-            <a href="javascript:void(0)" class="campaignCard">
-              <div class="campaignImg">
-                <img src="img/bn_1.jpg" alt="cp1" />
+      </div>
+      <div class="campaignBoardContainer">
+        <div class="campaignBoard">
+          <a href="javascript:void(0)" class="campaignCard">
+            <div class="campaignImg">
+              <img src="img/bn_1.jpg" alt="cp1" />
+            </div>
+            <div class="campaignInfo">
+              <div class="campaignStatus">
+                진행중<span>2021.10.14 ~ 상시</span>
               </div>
-              <div class="campaignInfo">
-                <div class="campaignStatus">
-                  진행중<span>2021.10.14 ~ 상시</span>
-                </div>
-                <div class="campaignTitle">
-                  소녀들의 깨끗하고 안전한 생리를 위한 WE=SHE 캠페인
-                </div>
+              <div class="campaignTitle">
+                소녀들의 깨끗하고 안전한 생리를 위한 WE=SHE 캠페인
               </div>
-            </a>
-            <a href="javascript:void(0)" class="campaignCard">
-              <div class="campaignImg">
-                <img src="img/bn_2.png" alt="cp2" />
+            </div>
+          </a>
+          <a href="javascript:void(0)" class="campaignCard">
+            <div class="campaignImg">
+              <img src="img/bn_2.png" alt="cp2" />
+            </div>
+            <div class="campaignInfo">
+              <div class="campaignStatus">
+                진행중<span>2022.09.23 ~ 상시</span>
               </div>
-              <div class="campaignInfo">
-                <div class="campaignStatus">
-                  진행중<span>2022.09.23 ~ 상시</span>
-                </div>
-                <div class="campaignTitle">동아프리카 영양실조 어린이 돕기</div>
+              <div class="campaignTitle">동아프리카 영양실조 어린이 돕기</div>
+            </div>
+          </a>
+          <a href="javascript:void(0)" class="campaignCard">
+            <div class="campaignImg">
+              <img src="img/bn_3.png" alt="cp3" />
+            </div>
+            <div class="campaignInfo">
+              <div class="campaignStatus">
+                진행중<span>2022.12.02 ~ 상시</span>
               </div>
-            </a>
-            <a href="javascript:void(0)" class="campaignCard">
-              <div class="campaignImg">
-                <img src="img/bn_3.png" alt="cp3" />
+              <div class="campaignTitle">
+                [가자 지구 긴급구호] 참혹한 분쟁 속 무구한 어린이를 도와주세요
               </div>
-              <div class="campaignInfo">
-                <div class="campaignStatus">
-                  진행중<span>2022.12.02 ~ 상시</span>
-                </div>
-                <div class="campaignTitle">
-                  [가자 지구 긴급구호] 참혹한 분쟁 속 무구한 어린이를 도와주세요
-                </div>
+            </div>
+          </a>
+          <a href="javascript:void(0)" class="campaignCard">
+            <div class="campaignImg">
+              <img src="img/bn_4.jpg" alt="cp4" />
+            </div>
+            <div class="campaignInfo">
+              <div class="campaignStatus">
+                진행중<span>2024.08.13 ~ 상시</span>
               </div>
-            </a>
-            <a href="javascript:void(0)" class="campaignCard">
-              <div class="campaignImg">
-                <img src="img/bn_4.jpg" alt="cp4" />
+              <div class="campaignTitle">
+                [수단 긴급구호] 최악의 식량난 '기근' 선포, 어린이를 구해주세요
               </div>
-              <div class="campaignInfo">
-                <div class="campaignStatus">
-                  진행중<span>2024.08.13 ~ 상시</span>
-                </div>
-                <div class="campaignTitle">
-                  [수단 긴급구호] 최악의 식량난 '기근' 선포, 어린이를 구해주세요
-                </div>
+            </div>
+          </a>
+          <a href="javascript:void(0)" class="campaignCard">
+            <div class="campaignImg">
+              <img src="img/bn_5.jpg" alt="cp5" />
+            </div>
+            <div class="campaignInfo">
+              <div class="campaignStatus">
+                진행중<span>2024.12.23 ~ 상시</span>
               </div>
-            </a>
-            <a href="javascript:void(0)" class="campaignCard">
-              <div class="campaignImg">
-                <img src="img/bn_5.jpg" alt="cp5" />
+              <div class="campaignTitle">유니세프 팀이니까 가능한 일</div>
+            </div>
+          </a>
+          <a href="javascript:void(0)" class="campaignCard">
+            <div class="campaignImg">
+              <img src="img/bn_6.png" alt="cp6" />
+            </div>
+            <div class="campaignInfo">
+              <div class="campaignStatus">
+                진행중<span>2025.01.10 ~ 상시</span>
               </div>
-              <div class="campaignInfo">
-                <div class="campaignStatus">
-                  진행중<span>2024.12.23 ~ 상시</span>
-                </div>
-                <div class="campaignTitle">유니세프 팀이니까 가능한 일</div>
+              <div class="campaignTitle">
+                기부 반지로 유니세프 팀 코리아, 하나가 되다
               </div>
-            </a>
-            <a href="javascript:void(0)" class="campaignCard">
-              <div class="campaignImg">
-                <img src="img/bn_6.png" alt="cp6" />
-              </div>
-              <div class="campaignInfo">
-                <div class="campaignStatus">
-                  진행중<span>2025.01.10 ~ 상시</span>
-                </div>
-                <div class="campaignTitle">
-                  기부 반지로 유니세프 팀 코리아, 하나가 되다
-                </div>
-              </div>
-            </a>
-          </div>
+            </div>
+          </a>
         </div>
       </div>
     </section>
@@ -589,7 +607,7 @@
           소식 전달을 목적으로 이름, 이메일주소를 수집하며, 수신거부 시까지
           이용·보유합니다.
         </p>
-        <form>
+        <form action="#" method="post">
           <input
             name="readerName"
             id="readerName"
@@ -644,11 +662,15 @@
         <div class="copy">
           COPYRIGHT @ THE KOREAN COMMITTEE FOR UNICEF. ALL RIGHT RESERVED
         </div>
-        <a class="goTop" href="header">
+        <a class="goTop" href="javascript:void(0)">
           <div class="tarrow">tarrow</div>
           <div class="top">TOP</div>
         </a>
       </div>
     </footer>
+
+    <!-- JS -->
+    <script src="js/common.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

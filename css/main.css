@@ -18,7 +18,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 20px;
+  gap: 15px;
   z-index: 10;
   outline: none;
 }
@@ -185,16 +185,416 @@
 }
 /* 섹션 1: 유니세프 소개 섹션 */
 #aboutUnicef {
-  height: 100vh;
   margin-top: 32px;
+  margin-bottom: 135px;
+}
+/* 이미지 소개 */
+.aboutByImg {
+  height: 275px;
+  position: relative;
+}
+.aboutMore {
+  position: absolute;
+  right: 16px;
+  top: 24px;
+}
+.aboutImgs {
+  position: absolute;
+  top: 82px;
+  width: 1220px;
+  height: 275px;
+  display: flex;
+  justify-content: space-between;
+}
+.imgCard {
+  width: 210px;
+  height: 275px;
+}
+.cardImg {
+  width: 210px;
+  height: 187px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imgCard img {
+  width: 187px;
+}
+.cardText {
+  width: 210px;
+  height: 60px;
+  margin-top: 15px;
+  font-family: "Freesentation-7Bold", sans-serif;
+  text-align: center;
+}
+.cardText span {
+  color: #2caeff;
+}
+/* 성과 소개 */
+.aboutByAchive {
+  margin-top: 135px;
+  height: 490px;
+  border-radius: 15px;
+  background-color: #fff;
+  box-shadow: 5px 5px 20px -7px rgba(0, 0, 0, 0.25);
+}
+#owl-two {
+  position: relative;
+  height: 100%;
+  bottom: 0;
+  cursor: grab;
+}
+#owl-two h4 {
+  font-family: "Freesentation-7Bold", sans-serif;
+  font-size: 24px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+#owl-two .owl-dots {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  transform: translateY(-60%);
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  z-index: 10;
+  outline: none;
+}
+#owl-two .active span {
+  width: 10px;
+  height: 10px;
+  margin: 5px 7px;
+  background: #2caeff !important;
+  display: block;
+  -webkit-backface-visibility: visible;
+  -webkit-transition: opacity 200ms ease;
+  -moz-transition: opacity 200ms ease;
+  -ms-transition: opacity 200ms ease;
+  -o-transition: opacity 200ms ease;
+  transition: opacity 200ms ease;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  outline: none;
+}
+.flexItems {
+  margin: 96px auto 0;
+  width: 1100px;
+  height: 380px;
+  display: flex;
+  justify-content: space-between;
+}
+.itemsCard {
+  width: 249px;
+  height: 380px;
+  text-align: center;
+}
+.itemsCard img {
+  width: 200px;
+  object-fit: cover;
+}
+.itemsCard p {
+  font-size: 20px;
+  line-height: 26px;
+  text-align: center;
+  margin-top: 24px;
+  color: #000;
 }
 
-/* 섹션 2: */
+/* 섹션 2: 유니세프와 사람들과 후원자 이야기 섹션 */
 #peopleStory {
-  height: 100vh;
+  margin-bottom: 135px;
+}
+/* 유니세프와 사람들 */
+.andPeople {
+  height: 357px;
+  position: relative;
+  margin-bottom: 100px;
+}
+.peopleMore {
+  position: absolute;
+  top: 24px;
+  right: 16px;
+}
+.peopleImgs {
+  position: absolute;
+  width: 1220px;
+  height: 275px;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.personImg {
+  width: 240px;
+  height: 275px;
+  text-align: center;
+}
+.circlePeople {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  overflow: hidden;
+  object-fit: cover;
+}
+.circlePeople img {
+  width: 240px;
+  transition: transform 0.3s ease;
+}
+.personImg:hover .circlePeople img {
+  transform: scale(1.05);
+}
+.personText {
+  margin-top: 15px;
+  font-family: "Freesentation-7Bold", sans-serif;
+  font-size: 20px;
+  color: #000;
+}
+/* 후원자 이야기 */
+.patronStory {
+  height: 382px;
+  position: relative;
+}
+.storyMore {
+  position: absolute;
+  top: 24px;
+  right: 16px;
+}
+.stories {
+  position: absolute;
+  bottom: 0;
+  width: 1220px;
+  height: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+.storyCard {
+  width: 270px;
+  height: 300px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 20px -7px rgba(0, 0, 0, 0.25);
+  background-color: #e8f4fb;
+  position: relative;
+  -webkit-transition: background-color 0.3s;
+}
+.storyCard:hover {
+  background-color: #c2e6fc;
+}
+.cardDate {
+  color: #2caeff;
+  font-size: 14px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+.cardTitle {
+  font-family: "Freesentation-7Bold", sans-serif;
+  font-size: 20px;
+  color: #000;
+  position: absolute;
+  top: 50px;
+  left: 20px;
+  line-height: 30px;
+}
+.cardWriter {
+  color: #2caeff;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
 }
 
-/* 섹션 3: */
+/* 섹션 3: 커뮤니티와 캠페인 섹션 */
 #commuCamp {
-  height: 100vh;
+  margin-bottom: 155px;
+}
+/* 커뮤니티 */
+.commu {
+  height: 397px;
+  position: relative;
+  margin-bottom: 100px;
+}
+.commuMore {
+  position: absolute;
+  top: 24px;
+  right: 16px;
+}
+.commuTabs {
+  width: 740px;
+  height: 40px;
+  position: absolute;
+  top: 67px;
+  display: flex;
+  justify-content: space-between;
+}
+.commuTabs > li {
+  display: inline-block;
+}
+.commuTabs > li > a {
+  display: block;
+  width: 120px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 20px;
+  border: 1px solid #d9d9d9;
+  color: #7a7a7a;
+  font-size: 20px;
+  background-color: #fff;
+}
+.commuTabs > li > a:hover {
+  background-color: #ececec;
+}
+.commuTabs > li.active > a {
+  background-color: #2caeff;
+  border: 1px solid #2caeff;
+  font-family: "Freesentation-7Bold", sans-serif;
+  color: #fff;
+}
+.commuContents {
+  display: none;
+}
+.commuTabs > li.active .commuContents {
+  position: absolute;
+  left: 0;
+  top: 60px;
+  width: 1220px;
+  height: 270px;
+  display: block;
+}
+.commuContents ul {
+  width: 1220px;
+  height: 270px;
+  display: flex;
+  justify-content: space-between;
+}
+.commuTabs > li.active li {
+  display: inline-block;
+}
+.commuTabs > li.active .commuCard {
+  display: block;
+  width: 270px;
+  height: 270px;
+  position: relative;
+  box-shadow: 5px 5px 20px -7px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  background-color: #fff;
+}
+.commuDate {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: #2caeff;
+  font-size: 14px;
+}
+.commuTitle {
+  position: absolute;
+  top: 50px;
+  left: 20px;
+  line-height: 30px;
+  font-family: "Freesentation-7Bold", sans-serif;
+  font-size: 20px;
+  color: #000;
+}
+.tagSection {
+  width: 120px;
+  height: 70px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.commuTag {
+  cursor: pointer;
+  font-family: "Freesentation-7Bold", sans-serif;
+  color: #2caeff;
+  font-size: 14px;
+  width: 120px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 15px;
+  border: 1px solid #2caeff;
+}
+.commuTag:hover {
+  background-color: #ececec;
+}
+/* 진행중인 캠페인 */
+.campaigns {
+  width: 1220px;
+  height: 47px;
+  margin: 0 auto;
+  position: relative;
+}
+.campaignMore {
+  position: absolute;
+  right: 16px;
+  top: 24px;
+}
+.campaignBoardContainer {
+  margin-top: 24px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 400px;
+  cursor: grab;
+  bottom: 0;
+}
+.campaignBoard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  transition: transform 0.3s ease;
+  padding: 0 32px;
+}
+.campaignCard {
+  display: block;
+  width: 580px;
+  height: 360px;
+  box-shadow: 5px 5px 20px -7px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  background-color: #fff;
+  overflow: hidden;
+}
+.campaignImg {
+  width: 580px;
+  height: 256px;
+  overflow: hidden;
+}
+.campaignImg img {
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+.campaignCard:hover img {
+  transform: scale(1.05);
+}
+.campaignInfo {
+  height: 104px;
+  position: relative;
+}
+.campaignStatus {
+  width: 530px;
+  font-size: 14px;
+  color: #2caeff;
+  position: absolute;
+  top: 25px;
+  left: 25px;
+}
+.campaignStatus span {
+  float: right;
+}
+.campaignTitle {
+  font-family: "Freesentation-7Bold", sans-serif;
+  font-size: 20px;
+  color: #000;
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
 }

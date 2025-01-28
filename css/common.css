@@ -29,10 +29,21 @@ ul {
   width: 1220px;
   margin: 0 auto;
 }
+
+/* 슬그머니 나타나는 섹션 제목들 */
 .articleTitle {
   font-family: "Freesentation-7Bold", sans-serif;
   font-size: 40px;
   color: #000;
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* input number 화살표 없애기 */
@@ -125,28 +136,28 @@ input[type="number"] {
   top: 30px;
 }
 .navi > li {
-  float: left;
-  padding-right: 52px;
+  margin-right: 52px;
   position: relative;
+  display: inline-block;
+  height: 60px;
 }
 .navi > li > a {
   font-family: "Freesentation-7Bold", sans-serif;
   font-size: 20px;
   color: #000;
-  display: block;
+  display: inline-block;
   padding: 2px 8px;
-  text-align: center;
 }
 .navi > li > a:hover {
-  /* 질문: 서브메뉴에 올라갔을 때에도 호버 효과 내려면? */
   color: #2caeff;
   border-bottom: 1.5px solid #2caeff;
 }
 .subMenu {
   position: absolute;
   top: 36px;
-  left: -48px;
+  left: -42px;
   width: 600px;
+  z-index: 2000;
 
   display: none;
 }
