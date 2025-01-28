@@ -157,4 +157,12 @@ $(document).ready(function () {
 
   // 초기 커서 스타일
   board.style.cursor = "grab";
+
+  ///////////////////////////////////////////////////////
+  // 화면 크기 구하기
+  window.addEventListener("resize", () => {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+    console.log(`화면 크기 변경됨: ${width}px x ${height}px`);
+  });
 });

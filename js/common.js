@@ -1,4 +1,35 @@
 $(document).ready(function () {
+  // 스크롤 다운 시 #upperHeader 안 보이게
+  let lastScrollTop = 0;
+  const $upperHeader = $("#upperHeader");
+  const $mainHeader = $("#mainHeader");
+  const headerHeight = $upperHeader.outerHeight();
+
+  $(window).on("scroll", function () {
+    const currentScrollTop = $(this).scrollTop();
+
+    // 스크롤 다운 시 upperHeader 사라짐
+    if (currentScrollTop > lastScrollTop) {
+      $upperHeader.stop().slideUp(300);
+      $mainHeader.css("top", "0"); // mainHeader가 맨 위로 이동
+    }
+    // 스크롤 업 시 upperHeader 등장
+    else if (currentScrollTop < lastScrollTop) {
+      if (currentScrollTop === 0) {
+        $upperHeader.stop().slideDown(300);
+      }
+    }
+
+    // mainHeader fixed
+    if (currentScrollTop > headerHeight) {
+      $mainHeader.addClass("fixed");
+    } else {
+      $mainHeader.removeClass("fixed");
+    }
+
+    lastScrollTop = currentScrollTop;
+  });
+
   // GNB(PC)
   $(".navi > li").on("mouseenter", function () {
     // 서브 메뉴 표시
