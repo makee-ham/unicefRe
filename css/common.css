@@ -87,6 +87,9 @@ input[type="number"] {
 .burger {
   display: none;
 }
+#menu-tb-m {
+  display: none;
+}
 /* #upperHeader */
 #upperHeader {
   width: 100%;
@@ -396,6 +399,19 @@ footer {
 
 /* 태블릿 버전 */
 @media all and (min-width: 830px) and (max-width: 1258px) {
+  .wrap {
+    width: 100%;
+  }
+  .wrap-tb {
+    width: 650px;
+    margin: 0 auto;
+  }
+  .sectionTitleWrap {
+    width: 650px;
+    height: 47px;
+    position: relative;
+    margin: 0 auto;
+  }
   /* GNB */
   #upperHeader {
     display: none;
@@ -408,22 +424,23 @@ footer {
     width: 100%;
   }
   .logo {
-    margin-top: 14px;
-    margin-left: 30px;
+    position: absolute;
+    left: 30px;
+    top: -4px;
   }
   .menu {
     display: none;
   }
   .supportHeader {
     position: absolute;
-    top: 26px;
+    top: 30px;
     right: 90px;
   }
   .burger {
     display: block;
     position: absolute;
     right: 32px;
-    top: 26px;
+    top: 30px;
     width: 40px;
     height: 40px;
     cursor: pointer;
@@ -431,7 +448,111 @@ footer {
   .burger img {
     width: 100%;
   }
-  /* 버거를 누르면 서브메뉴가 뾰로롱 */
+  /* 메뉴 뒤의 배경 (다른 것들 클릭되면 안 되니...) */
+  .blackbg {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 100px;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  /* 버거를 누르면 태블릿/모바일용 메뉴가 뾰로롱 */
+  #menu-tb-m {
+    display: block;
+    width: 390px;
+    height: 670px;
+    background-color: #fff;
+    position: absolute;
+    right: 0;
+    top: 100px;
+    z-index: 1000;
+  }
+  /* upperHeader */
+  .upperHeader-tb-m {
+    width: 100%;
+    height: 80px;
+    background-color: #2caeff;
+    position: relative;
+  }
+  .closeMenu {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 25px;
+    left: 30px;
+    text-indent: -9999px;
+    background: url(../img/close.png) no-repeat center;
+    cursor: pointer;
+  }
+  .utils {
+    position: absolute;
+    width: 202px;
+    height: 50px;
+    top: 15px;
+    right: 28px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .tbmUpper {
+    color: #fff;
+    font-size: 14px;
+    width: 53px;
+    height: 50px;
+    text-align: center;
+    cursor: pointer;
+  }
+  .tbmUpper:before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: url(../img/mypage.png) no-repeat center;
+    background-size: cover;
+    cursor: pointer;
+    margin-left: 11px;
+  }
+  .tbmUpper + div:before {
+    background: url(../img/check.png) no-repeat center;
+    background-size: cover;
+  }
+  .tbmUpper + div + div:before {
+    background: url(../img/faq.png) no-repeat center;
+    background-size: cover;
+  }
+  /* mainMenu & subMenu */
+  .mainMenu-tb-m {
+    width: 300px;
+    height: 80%;
+    margin: 30px 0 0 30px;
+  }
+  .mainMenu-tb-m > ul > li {
+    position: relative;
+    margin-bottom: 30px;
+  }
+  .mainMenu-tb-m > ul > li > a {
+    font-family: "Freesentation-7Bold", sans-serif;
+    font-size: 20px;
+    color: #000;
+  }
+  .mainMenu-tb-m > ul > li > a:hover {
+    color: #2caeff;
+  }
+  .subMenu-tb-m {
+    left: 151px;
+    padding-left: 151px;
+    margin-top: -27px;
+
+    display: none;
+  }
+  .subMenu-tb-m > li {
+    margin-bottom: 15px;
+  }
+  .subMenu-tb-m > li > a:hover {
+    font-family: "Freesentation-7Bold", sans-serif;
+    color: #2caeff;
+  }
+
   /* 뉴스레터 */
   #newsletter {
     width: 100%;

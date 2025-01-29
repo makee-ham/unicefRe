@@ -159,10 +159,103 @@ $(document).ready(function () {
   board.style.cursor = "grab";
 
   ///////////////////////////////////////////////////////
-  // 화면 크기 구하기
+  // 1259px 너비 미만 공통 드래그 적용 함수
+  function makeDraggable(containerSelector) {
+    const container = document.querySelector(containerSelector);
+    if (!container) return;
+
+    let isDragging = false;
+    let startX = 0;
+    let currentTranslate = 0;
+    let previousTranslate = 0;
+    let dragDistance = 0;
+    let clickPrevented = false; // 클릭 차단 여부
+
+    function startDrag(event) {
+      if (window.innerWidth >= 1259) return; // 1259px 이상에서는 드래그 막기
+
+      const targetContainer = event.target.closest(containerSelector);
+      if (!targetContainer) return;
+
+      isDragging = true;
+      startX = getEventX(event);
+      container.style.transition = "none";
+      container.style.cursor = "grabbing";
+      dragDistance = 0;
+      clickPrevented = false; // 클릭 차단 초기화
+    }
+
+    function drag(event) {
+      if (!isDragging || window.innerWidth >= 1259) return;
+
+      const currentX = getEventX(event);
+      dragDistance = currentX - startX;
+      if (Math.abs(dragDistance) > 5) clickPrevented = true; // 5px 이상 이동 시 클릭 차단
+
+      currentTranslate = previousTranslate + dragDistance;
+      container.style.transform = `translateX(${currentTranslate}px)`;
+    }
+
+    function endDrag(event) {
+      if (!isDragging || window.innerWidth >= 1259) return;
+      isDragging = false;
+      container.style.cursor = "grab";
+
+      const parentWidth = container.parentElement.offsetWidth;
+      const containerWidth = container.scrollWidth;
+
+      if (currentTranslate > 0) {
+        currentTranslate = 0;
+      } else if (currentTranslate < parentWidth - containerWidth) {
+        currentTranslate = parentWidth - containerWidth;
+      }
+
+      container.style.transition = "transform 0.3s ease";
+      container.style.transform = `translateX(${currentTranslate}px)`;
+      previousTranslate = currentTranslate;
+
+      // 드래그가 아닌 경우에만 링크 클릭 허용
+      if (!clickPrevented) {
+        const targetLink = event.target.closest("a");
+        if (targetLink) {
+          setTimeout(() => {
+            window.location.href = targetLink.href; // 클릭 시 정상 이동
+          }, 50);
+        }
+      }
+    }
+
+    function getEventX(event) {
+      return event.type.includes("mouse")
+        ? event.clientX
+        : event.touches[0].clientX;
+    }
+
+    // 이벤트 리스너 등록
+    container.addEventListener("mousedown", startDrag);
+    container.addEventListener("mousemove", drag);
+    container.addEventListener("mouseup", endDrag);
+    container.addEventListener("mouseleave", endDrag);
+    container.addEventListener("touchstart", startDrag);
+    container.addEventListener("touchmove", drag);
+    container.addEventListener("touchend", endDrag);
+
+    container.style.cursor = "grab";
+  }
+
+  // 캠페인 제외한 요소들만 적용 (1259px 미만에서만 작동)
+  if (window.innerWidth < 1259) {
+    makeDraggable(".piContainer .peopleImgs"); // 유니세프와 사람들
+    makeDraggable(".sContainer .stories"); // 후원자 이야기
+    makeDraggable(".commuContents ul"); // 커뮤니티 뉴스, 공지사항 등
+  }
+
+  // 창 크기 변경 시 드래그 기능 활성화/비활성화
   window.addEventListener("resize", () => {
-    const width = window.innerWidth;
-    const height = window.innerHeight;
-    console.log(`화면 크기 변경됨: ${width}px x ${height}px`);
+    if (window.innerWidth < 1259) {
+      makeDraggable(".piContainer .peopleImgs");
+      makeDraggable(".sContainer .stories");
+      makeDraggable(".commuContents ul");
+    }
   });
 });

@@ -89,8 +89,63 @@
           <a class="supportHeader" href="javascript:void(0)">후원하기</a>
         </div>
         <!-- 태블릿과 모바일의 햄버거 -->
-        <div class="burger"><img src="img/burger.png" alt="burger" /></div>
-        <!-- 메모: 태블릿/모바일 서브 메뉴가 들어올 곳 -->
+        <div class="burger"><img src="img/burger.png" alt="tastyBurger" /></div>
+        <!-- 태블릿/모바일 서브 메뉴 (메뉴 외 영역 눌러도 닫히게 할 것) -->
+        <div class="blackbg"></div>
+        <div id="menu-tb-m">
+          <div class="upperHeader-tb-m">
+            <div class="closeMenu">닫기</div>
+            <div class="utils">
+              <!-- before로 아이콘 넣어줄 것 -->
+              <div class="myPage tbmUpper">마이페이지</div>
+              <div class="receipt tbmUpper">기부영수증</div>
+              <div class="faq tbmUpper">FAQ</div>
+            </div>
+          </div>
+          <div class="mainMenu-tb-m">
+            <ul>
+              <li>
+                <a href="javascript:void(0)">주요 활동</a>
+                <ul class="subMenu-tb-m">
+                  <li><a href="javascript:void(0)">활동 지역</a></li>
+                  <li><a href="javascript:void(0)">차별 없는 구호</a></li>
+                  <li><a href="javascript:void(0)">어린이 삶 개선</a></li>
+                  <li><a href="javascript:void(0)">긴급구호</a></li>
+                  <li><a href="javascript:void(0)">한국 아동권리 증진</a></li>
+                  <li><a href="javascript:void(0)">한국 정부 협력</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="javascript:void(0)">후원과 참여</a>
+                <ul class="subMenu-tb-m">
+                  <li><a href="javascript:void(0)">개인이 후원</a></li>
+                  <li><a href="javascript:void(0)">단체가 후원</a></li>
+                  <li><a href="javascript:void(0)">후원자 참여</a></li>
+                  <li><a href="javascript:void(0)">어린이 참여</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="javascript:void(0)">유니세프 소개</a>
+                <ul class="subMenu-tb-m">
+                  <li><a href="javascript:void(0)">유니세프</a></li>
+                  <li><a href="javascript:void(0)">투명한 유니세프</a></li>
+                  <li><a href="javascript:void(0)">유니세프와 사람들</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="javascript:void(0)">커뮤니티</a>
+                <ul class="subMenu-tb-m">
+                  <li><a href="javascript:void(0)">소식</a></li>
+                  <li><a href="javascript:void(0)">자료실</a></li>
+                  <li><a href="javascript:void(0)">캠페인</a></li>
+                  <li><a href="javascript:void(0)">공지사항</a></li>
+                  <li><a href="javascript:void(0)">보도자료</a></li>
+                  <li><a href="javascript:void(0)">채용</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <!-- 이미지 캐러셀 PC -->
@@ -147,13 +202,13 @@
           <option value="one-time">일시 후원</option>
         </select>
 
-        <button type="button" class="amount-btn active" data-value="30000">
+        <button type="button" class="amount-btn ab1 active" data-value="30000">
           30,000 원
         </button>
-        <button type="button" class="amount-btn" data-value="50000">
+        <button type="button" class="amount-btn ab2" data-value="50000">
           50,000 원
         </button>
-        <button type="button" class="amount-btn" data-value="100000">
+        <button type="button" class="amount-btn ab3" data-value="100000">
           100,000 원
         </button>
       </div>
@@ -169,8 +224,8 @@
         <button type="button" class="inquiry-btn">문의하기</button>
       </div>
     </div>
-    <!-- 섹션 1: 유니세프 소개 섹션 (높이 가득 차게) -->
-    <section id="aboutUnicef" class="wrap">
+    <!-- 섹션 1: 유니세프 소개 섹션 -->
+    <section id="aboutUnicef" class="wrap wrap-tb">
       <!-- 이미지 소개 -->
       <div class="aboutByImg">
         <h2 class="articleTitle fade-in">UN공식기관 유니세프</h2>
@@ -363,86 +418,98 @@
         </div>
       </div>
     </section>
-    <!-- 섹션 2: 유니세프와 사람들과 후원자 이야기 섹션 (높이 가득 차게) -->
+    <!-- 섹션 2: 유니세프와 사람들과 후원자 이야기 섹션 -->
     <section id="peopleStory" class="wrap">
       <!-- 유니세프와 사람들 -->
       <div class="andPeople">
-        <h2 class="articleTitle fade-in">유니세프와 사람들</h2>
-        <a class="viewMore peopleMore" href="javascript:void(0)"
-          ><div class="more">자세히 보기</div>
-          <div class="rarrow">rarrow</div></a
-        >
-        <div class="peopleImgs">
-          <a class="personImg" href="javascript:void(0)">
-            <div class="circlePeople">
-              <img src="img/TH_KHS.png" alt="KHS" />
-            </div>
-            <div class="personText">김혜수 친선대사</div>
-          </a>
-          <a class="personImg" href="javascript:void(0)">
-            <div class="circlePeople">
-              <img src="img/TH_ASK.png" alt="ASK" />
-            </div>
-            <div class="personText">안성기 친선대사</div>
-          </a>
-          <a class="personImg" href="javascript:void(0)">
-            <div class="circlePeople">
-              <img src="img/TH_LBY.png" alt="LBY" />
-            </div>
-            <div class="personText">이보영 친선대사</div>
-          </a>
-          <a class="personImg" href="javascript:void(0)">
-            <div class="circlePeople">
-              <img src="img/TH_JS.png" alt="JS" />
-            </div>
-            <div class="personText">지성 친선대사</div>
-          </a>
+        <div class="sectionTitleWrap">
+          <h2 class="articleTitle fade-in">유니세프와 사람들</h2>
+          <a class="viewMore peopleMore" href="javascript:void(0)"
+            ><div class="more">자세히 보기</div>
+            <div class="rarrow">rarrow</div></a
+          >
+        </div>
+        <div class="piContainer">
+          <div class="peopleImgs">
+            <a class="personImg" href="javascript:void(0)">
+              <div class="circlePeople">
+                <img src="img/TH_KHS.png" alt="KHS" />
+              </div>
+              <div class="personText">김혜수 친선대사</div>
+            </a>
+            <a class="personImg" href="javascript:void(0)">
+              <div class="circlePeople">
+                <img src="img/TH_ASK.png" alt="ASK" />
+              </div>
+              <div class="personText">안성기 친선대사</div>
+            </a>
+            <a class="personImg" href="javascript:void(0)">
+              <div class="circlePeople">
+                <img src="img/TH_LBY.png" alt="LBY" />
+              </div>
+              <div class="personText">이보영 친선대사</div>
+            </a>
+            <a class="personImg" href="javascript:void(0)">
+              <div class="circlePeople">
+                <img src="img/TH_JS.png" alt="JS" />
+              </div>
+              <div class="personText">지성 친선대사</div>
+            </a>
+          </div>
         </div>
       </div>
       <!-- 후원자 이야기 -->
       <div class="patronStory">
-        <h2 class="articleTitle fade-in">후원자 이야기</h2>
-        <a class="viewMore storyMore" href="javascript:void(0)"
-          ><div class="more">자세히 보기</div>
-          <div class="rarrow">rarrow</div></a
-        >
-        <div class="stories">
-          <a class="storyCard" href="javascript:void(0)">
-            <div class="cardDate">2025년 01월 12일</div>
-            <div class="cardTitle">캄보디아 여행이 바꾼<br />나의 일상</div>
-            <div class="cardWriter">김샛별 후원자님</div>
-          </a>
-          <a class="storyCard" href="javascript:void(0)">
-            <div class="cardDate">2024년 12월 26일</div>
-            <div class="cardTitle">
-              일흔둘,<br />다시 일하는 기쁨과<br />감사를 담아
-            </div>
-            <div class="cardWriter">이영상 후원자님</div>
-          </a>
-          <a class="storyCard" href="javascript:void(0)">
-            <div class="cardDate">2025년 12월 03일</div>
-            <div class="cardTitle">귀농생활의 씨앗이자<br />열매가 된 기부</div>
-            <div class="cardWriter">정다운 후원자님</div>
-          </a>
-          <a class="storyCard" href="javascript:void(0)">
-            <div class="cardDate">2025년 11월 19일</div>
-            <div class="cardTitle">
-              'BTS'로 시작한 후원,<br />후원금 쓰인 곳 알게 될 때<br />행복해져
-            </div>
-            <div class="cardWriter">우지민 후원자님</div>
-          </a>
+        <div class="sectionTitleWrap">
+          <h2 class="articleTitle fade-in">후원자 이야기</h2>
+          <a class="viewMore storyMore" href="javascript:void(0)"
+            ><div class="more">자세히 보기</div>
+            <div class="rarrow">rarrow</div></a
+          >
+        </div>
+        <div class="sContainer">
+          <div class="stories">
+            <a class="storyCard" href="javascript:void(0)">
+              <div class="cardDate">2025년 01월 12일</div>
+              <div class="cardTitle">캄보디아 여행이 바꾼<br />나의 일상</div>
+              <div class="cardWriter">김샛별 후원자님</div>
+            </a>
+            <a class="storyCard" href="javascript:void(0)">
+              <div class="cardDate">2024년 12월 26일</div>
+              <div class="cardTitle">
+                일흔둘,<br />다시 일하는 기쁨과<br />감사를 담아
+              </div>
+              <div class="cardWriter">이영상 후원자님</div>
+            </a>
+            <a class="storyCard" href="javascript:void(0)">
+              <div class="cardDate">2025년 12월 03일</div>
+              <div class="cardTitle">
+                귀농생활의 씨앗이자<br />열매가 된 기부
+              </div>
+              <div class="cardWriter">정다운 후원자님</div>
+            </a>
+            <a class="storyCard" href="javascript:void(0)">
+              <div class="cardDate">2025년 11월 19일</div>
+              <div class="cardTitle">
+                'BTS'로 시작한 후원,<br />후원금 쓰인 곳 알게 될 때<br />행복해져
+              </div>
+              <div class="cardWriter">우지민 후원자님</div>
+            </a>
+          </div>
         </div>
       </div>
     </section>
-    <!-- 섹션 3: 커뮤니티와 캠페인 섹션 (너비 건드리지 아니함, 높이 가득 차게) -->
+    <!-- 섹션 3: 커뮤니티와 캠페인 섹션 (너비 건드리지 아니함) -->
     <section id="commuCamp">
       <!-- 커뮤니티 -->
       <div class="commu wrap">
-        <h2 class="articleTitle fade-in">커뮤니티</h2>
-        <a class="viewMore commuMore" href="javascript:void(0)"
-          ><div class="more">자세히 보기</div>
-          <div class="rarrow">rarrow</div></a
-        >
+        <div class="sectionTitleWrap">
+          <h2 class="articleTitle fade-in">커뮤니티</h2>
+          <a class="viewMore commuMore" href="javascript:void(0)"
+            ><div class="more">자세히 보기</div>
+            <div class="rarrow">rarrow</div></a
+          >
+        </div>
         <ul class="commuTabs">
           <li class="active">
             <a href="javascript:void(0)">뉴스</a>
