@@ -111,7 +111,7 @@ $(document).ready(function () {
 
   // go top!
   $(".goTop").on("click", function () {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    $("html, body").animate({ scrollTop: 0 }, "slow");
   });
 
   // 화면 크기 구하기 (해상도 체크용)

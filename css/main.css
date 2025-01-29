@@ -1348,6 +1348,7 @@
     width: 100%;
     height: 300px;
     display: block;
+    overflow: hidden;
   }
   .commuContents ul {
     width: calc(300px * 4);
