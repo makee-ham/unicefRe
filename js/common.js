@@ -1,34 +1,35 @@
 $(document).ready(function () {
-  // PC 스크롤 다운 시 #upperHeader 안 보이게
+  // 헤더 따라다니기
   let lastScrollTop = 0;
   const $upperHeader = $("#upperHeader");
   const $mainHeader = $("#mainHeader");
-  const headerHeight = $upperHeader.outerHeight();
 
-  $(window).on("scroll", function () {
+  $(window).on("scroll resize", function () {
     const currentScrollTop = $(this).scrollTop();
     const windowWidth = $(window).width(); // 현재 뷰포트 너비 확인
 
-    // 1258px 초과에서만 동작
     if (windowWidth > 1258) {
-      // 스크롤 다운 시 upperHeader 사라짐
+      // PC 버전: body padding 변경 없음
       if (currentScrollTop > lastScrollTop) {
         $upperHeader.stop().slideUp(300);
         $mainHeader.css("top", "0"); // mainHeader가 맨 위로 이동
-      }
-      // 스크롤 업 시 upperHeader 등장
-      else if (currentScrollTop < lastScrollTop) {
+      } else if (currentScrollTop < lastScrollTop) {
         if (currentScrollTop === 0) {
           $upperHeader.stop().slideDown(300);
         }
       }
 
-      // mainHeader fixed
-      if (currentScrollTop > headerHeight) {
+      if (currentScrollTop > $upperHeader.outerHeight()) {
         $mainHeader.addClass("fixed");
       } else {
         $mainHeader.removeClass("fixed");
       }
+
+      // PC에서는 body의 padding-top을 조정하지 않음
+    } else {
+      // 태블릿 & 모바일 버전: upperHeader가 없으므로 mainHeader 높이만큼만 body 밀기
+      $mainHeader.addClass("fixed").css("top", "0");
+      $("body").css("padding-top", `${$mainHeader.outerHeight()}px`);
     }
 
     lastScrollTop = currentScrollTop;

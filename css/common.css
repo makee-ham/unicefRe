@@ -396,6 +396,9 @@ footer {
   top: 95px;
   left: 11.5px;
 }
+.sns_m {
+  display: none;
+}
 
 /* 태블릿 버전 */
 @media all and (min-width: 830px) and (max-width: 1258px) {
@@ -422,6 +425,9 @@ footer {
   #mainHeader {
     position: relative;
     width: 100%;
+  }
+  #mainHeader.fixed {
+    height: 100px;
   }
   .logo {
     position: absolute;
@@ -672,5 +678,330 @@ footer {
     font-size: 14px;
     top: 95px;
     left: 11.5px;
+  }
+  .sns_m {
+    display: none;
+  }
+}
+
+/* 모바일 버전 */
+@media all and (max-width: 829.5px) {
+  .wrap {
+    width: 100%;
+  }
+  .sectionTitleWrap {
+    width: 310px;
+    height: 28px;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  /* view more 여기 다시!!! */
+  /* 메모: 초기화...는 common 가서 해야할듯 */
+  /* 다시 */
+  .viewMore {
+    width: 58px;
+    height: 16px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  .more {
+    position: static;
+  }
+  .rarrow {
+    display: none;
+  }
+
+  /* GNB */
+  #upperHeader {
+    display: none;
+  }
+  .headerWrap {
+    position: static;
+  }
+  #mainHeader {
+    position: relative;
+    width: 100%;
+    height: 80px;
+  }
+  #mainHeader.fixed {
+    height: 80px;
+  }
+  .logo {
+    position: absolute;
+    left: 15px;
+    top: -16px;
+  }
+  .menu {
+    display: none;
+  }
+  .supportHeader {
+    position: absolute;
+    top: 20px;
+    right: 72px;
+    width: 100px;
+  }
+  .burger {
+    display: block;
+    position: absolute;
+    right: 16px;
+    top: 20px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+  .burger img {
+    width: 100%;
+  }
+  /* 메뉴 뒤의 배경 (다른 것들 클릭되면 안 되니...) */
+  .blackbg {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 80px;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  /* 버거를 누르면 태블릿/모바일용 메뉴가 뾰로롱 */
+  #menu-tb-m {
+    display: block;
+    width: 100%;
+    height: 670px;
+    background-color: #fff;
+    position: absolute;
+    right: 0;
+    top: 80px;
+    z-index: 2000;
+  }
+  /* upperHeader */
+  .upperHeader-tb-m {
+    width: 100%;
+    height: 80px;
+    background-color: #2caeff;
+    position: relative;
+  }
+  .closeMenu {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 25px;
+    left: 30px;
+    text-indent: -9999px;
+    background: url(../img/close.png) no-repeat center;
+    cursor: pointer;
+  }
+  .utils {
+    position: absolute;
+    width: 202px;
+    height: 50px;
+    top: 15px;
+    right: 28px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .tbmUpper {
+    color: #fff;
+    font-size: 14px;
+    width: 53px;
+    height: 50px;
+    text-align: center;
+    cursor: pointer;
+  }
+  .tbmUpper:before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: url(../img/mypage.png) no-repeat center;
+    background-size: cover;
+    cursor: pointer;
+    margin-left: 11px;
+  }
+  .tbmUpper + div:before {
+    background: url(../img/check.png) no-repeat center;
+    background-size: cover;
+  }
+  .tbmUpper + div + div:before {
+    background: url(../img/faq.png) no-repeat center;
+    background-size: cover;
+  }
+  /* mainMenu & subMenu */
+  .mainMenu-tb-m {
+    width: 300px;
+    height: 80%;
+    margin: 30px auto 0;
+  }
+  .mainMenu-tb-m > ul > li {
+    position: relative;
+    margin-bottom: 30px;
+  }
+  .mainMenu-tb-m > ul > li > a {
+    font-family: "Freesentation-7Bold", sans-serif;
+    font-size: 20px;
+    color: #000;
+  }
+  .mainMenu-tb-m > ul > li > a:hover {
+    color: #2caeff;
+  }
+  .subMenu-tb-m {
+    left: 151px;
+    padding-left: 151px;
+    margin-top: -27px;
+    display: none;
+  }
+  .subMenu-tb-m > li {
+    margin-bottom: 15px;
+  }
+  .subMenu-tb-m > li > a:hover {
+    font-family: "Freesentation-7Bold", sans-serif;
+    color: #2caeff;
+  }
+
+  /* 뉴스레터 */
+  #newsletter {
+    width: 100%;
+    height: 100%;
+    min-height: 260px;
+  }
+  .newsletterContents {
+    width: 100%;
+    height: 100%;
+    position: static;
+  }
+  .newsletterContents h3 {
+    font-family: "Freesentation-7Bold", sans-serif;
+    font-size: 32px;
+    color: #fff;
+    position: static;
+    margin: 0 auto;
+    padding-top: 30px;
+    width: 90%;
+    min-height: 80px;
+    line-height: 40px;
+  }
+  .newsletterContents p {
+    font-size: 14px;
+    color: #fff;
+    position: static;
+    margin: 0 auto;
+    padding-top: 10px;
+    width: 90%;
+  }
+  .newsletterContents form {
+    width: 90%;
+    margin: 0 auto;
+  }
+  #readerName {
+    position: static;
+    margin-top: 28px;
+    width: 25%;
+  }
+  #readerEMail {
+    position: static;
+    margin-top: 28px;
+    float: right;
+    width: 70%;
+  }
+  .subscribe {
+    position: static;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+  .sns {
+    display: none;
+  }
+  /* 푸터 */
+  footer {
+    height: 100%;
+    min-height: 324px;
+  }
+  .footerContents {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+  }
+  .sns_m {
+    display: flex;
+    max-width: 180px;
+    width: 50%;
+    height: 30px;
+    justify-content: space-between;
+    margin-top: 24px;
+  }
+  .siteMenu {
+    position: static;
+    width: 100%;
+    height: 20px;
+    margin-top: 24px;
+  }
+  .siteMenu li {
+    float: left;
+    font-size: 14px;
+  }
+  .siteMenu li:after {
+    content: "|";
+    font-family: "Freesentation-4Regular", sans-serif;
+    color: #7a7a7a;
+    padding: 0 5px;
+  }
+  .siteMenu li:last-child:after {
+    content: "";
+    display: none;
+  }
+  .call1 {
+    float: left;
+    width: 60%;
+    height: 30px;
+    position: static;
+    font-size: 14px;
+    margin-top: 20px;
+  }
+  .call2 {
+    float: right;
+    width: 30%;
+    position: static;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  .info1 {
+    clear: both;
+    position: static;
+    padding-top: 20px;
+    font-size: 14px;
+  }
+  .info2 {
+    position: static;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  .info3 {
+    position: static;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  .copy {
+    position: static;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  .goTop {
+    position: absolute;
+    float: right;
+    max-width: 60px;
+    max-height: 30px;
+    text-align: center;
+    line-height: 30px;
+    top: 0;
+  }
+  .tarrow {
+    display: none;
+  }
+  .top {
+    font-family: "Freesentation-4Regular", sans-serif;
+    font-size: 16px;
+    position: static;
   }
 }
