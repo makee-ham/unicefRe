@@ -1003,6 +1003,7 @@
   .donation-form {
     position: static;
     width: 80%;
+    min-width: 266px;
     height: 170px;
     margin: 18px auto 0;
     padding: 20px;
@@ -1020,7 +1021,7 @@
     border-radius: 15px;
     line-height: 30px;
     padding-left: 0;
-    margin-right: 50%;
+    margin-right: 60px;
     text-align: center;
     background: url(../img/selectMore.png) no-repeat 90% 55%;
     background-size: 10px;
