@@ -1020,6 +1020,10 @@
     height: 30px;
   }
   #donation-type {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
     width: 45%;
     height: 30px;
     font-size: 14px;
