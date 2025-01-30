@@ -1029,8 +1029,7 @@
     font-size: 14px;
     border-radius: 15px;
     line-height: 30px;
-    padding-left: 0;
-    text-align: center !important;
+    padding-left: calc((45% - 50px) / 2);
     background: url(../img/selectMore.png) no-repeat 90% 55%;
     background-size: 10px;
   }
