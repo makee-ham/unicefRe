@@ -1030,7 +1030,7 @@
     border-radius: 15px;
     line-height: 30px;
     padding-left: 0;
-    text-align: center;
+    text-align: center !important;
     background: url(../img/selectMore.png) no-repeat 90% 55%;
     background-size: 10px;
   }
