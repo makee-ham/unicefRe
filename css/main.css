@@ -1072,6 +1072,7 @@
   }
   #custom-amount::placeholder {
     opacity: 1;
+    line-height: 30px;
   }
   #custom-amount {
     text-align: center;
