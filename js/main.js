@@ -73,6 +73,13 @@ $(document).ready(function () {
   let previousTranslate = 0; // 이전 위치
   let dragDistance = 0; // 드래그 거리
 
+  // 이벤트에서 X 좌표 가져오기
+  function getEventX(event) {
+    return event.type.includes("mouse")
+      ? event.clientX
+      : event.touches[0].clientX;
+  }
+
   // 드래그 시작
   function startDrag(event) {
     isDragging = true;
@@ -114,6 +121,7 @@ $(document).ready(function () {
 
     // 드래그가 아닌 경우에만 링크 클릭 허용
     if (Math.abs(dragDistance) < 5) {
+      // ^ 절대값
       const targetLink = event.target.closest(".recoCircle"); // 클릭된 요소가 링크인지 확인
       if (targetLink) {
         window.location.href = targetLink.href; // 링크로 이동
@@ -129,13 +137,6 @@ $(document).ready(function () {
       }
     });
   });
-
-  // 이벤트에서 X 좌표 가져오기
-  function getEventX(event) {
-    return event.type.includes("mouse")
-      ? event.clientX
-      : event.touches[0].clientX;
-  }
 
   // 이미지 기본 드래그 방지
   images.forEach((img) => {
@@ -170,6 +171,12 @@ $(document).ready(function () {
     let previousTranslate = 0;
     let dragDistance = 0;
     let clickPrevented = false; // 클릭 차단 여부
+
+    function getEventX(event) {
+      return event.type.includes("mouse")
+        ? event.clientX
+        : event.touches[0].clientX;
+    }
 
     function startDrag(event) {
       if (window.innerWidth >= 1259) return; // 1259px 이상에서는 드래그 막기
@@ -223,12 +230,6 @@ $(document).ready(function () {
           }, 50);
         }
       }
-    }
-
-    function getEventX(event) {
-      return event.type.includes("mouse")
-        ? event.clientX
-        : event.touches[0].clientX;
     }
 
     // 이벤트 리스너 등록

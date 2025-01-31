@@ -6,13 +6,13 @@ $(document).ready(function () {
 
   $(window).on("scroll resize", function () {
     const currentScrollTop = $(this).scrollTop();
-    const windowWidth = $(window).width(); // 현재 뷰포트 너비 확인
+    const windowWidth = $(window).width(); // 현재 뷰포트 너비 확인하기
 
     if (windowWidth > 1258) {
       // PC 버전: body padding 변경 없음
       if (currentScrollTop > lastScrollTop) {
         $upperHeader.stop().slideUp(300);
-        $mainHeader.css("top", "0"); // mainHeader가 맨 위로 이동
+        $mainHeader.css("top", "0");
       } else if (currentScrollTop < lastScrollTop) {
         if (currentScrollTop === 0) {
           $upperHeader.stop().slideDown(300);
@@ -24,8 +24,6 @@ $(document).ready(function () {
       } else {
         $mainHeader.removeClass("fixed");
       }
-
-      // PC에서는 body의 padding-top을 조정하지 않음
     } else {
       // 태블릿 & 모바일 버전: upperHeader가 없으므로 mainHeader 높이만큼만 body 밀기
       $mainHeader.addClass("fixed").css("top", "0");
@@ -102,7 +100,7 @@ $(document).ready(function () {
     // 올바르지 않은 이메일 형식 경고
     if (!emailPattern.test(email)) {
       alert("올바른 이메일 형식을 입력하세요.");
-      e.preventDefault(); // 제출 방지
+      e.preventDefault();
       return false;
     }
     // 제출 성공!
