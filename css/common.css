@@ -501,6 +501,7 @@ footer {
     justify-content: space-between;
   }
   .tbmUpper {
+    display: block;
     color: #fff;
     font-size: 14px;
     width: 53px;
@@ -518,11 +519,11 @@ footer {
     cursor: pointer;
     margin-left: 11px;
   }
-  .tbmUpper + div:before {
+  .tbmUpper + a:before {
     background: url(../img/check.png) no-repeat center;
     background-size: cover;
   }
-  .tbmUpper + div + div:before {
+  .tbmUpper + a + a:before {
     background: url(../img/faq.png) no-repeat center;
     background-size: cover;
   }

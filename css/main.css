@@ -429,7 +429,7 @@
   right: 16px;
 }
 .commuTabs {
-  width: 740px;
+  width: 587px;
   height: 40px;
   position: absolute;
   top: 67px;
@@ -855,7 +855,8 @@
     width: 100%;
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-left: 20vw;
     gap: 13px;
     top: 20px;
   }

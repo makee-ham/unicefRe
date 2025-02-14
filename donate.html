@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project 유니세프</title>
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="css/common.css" />
+    <!-- jquery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- 공통 영역 -->
+    <!-- 헤더 -->
+    <header>
+      <!-- 마이페이지 etc. -->
+      <div id="upperHeader">
+        <div class="wrap">
+          <ul class="upMenu">
+            <li><a href="login.html">마이페이지</a></li>
+            <li><a href="javascript:void(0)">기부영수증</a></li>
+            <li><a href="javascript:void(0)">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="mainHeader">
+        <div class="headerWrap wrap">
+          <!-- 로고 -->
+          <h1 class="logo">
+            <a href="index.html"><img src="img/logo.png" alt="logo" /></a>
+          </h1>
+          <!-- 메인 메뉴 -->
+          <nav class="menu">
+            <ul class="navi">
+              <li>
+                <a class="mainMenu" href="javascript:void(0)">주요 활동</a>
+                <ul class="subMenu">
+                  <li><a href="javascript:void(0)">활동 지역</a></li>
+                  <li><a href="javascript:void(0)">차별 없는 구호</a></li>
+                  <li><a href="javascript:void(0)">어린이 삶 개선</a></li>
+                  <li><a href="javascript:void(0)">긴급구호</a></li>
+                  <li><a href="javascript:void(0)">한국 아동권리 증진</a></li>
+                  <li><a href="javascript:void(0)">한국 정부 협력</a></li>
+                </ul>
+              </li>
+              <li>
+                <a class="mainMenu" href="javascript:void(0)">후원과 참여</a>
+                <ul class="subMenu">
+                  <li><a href="javascript:void(0)">개인이 후원</a></li>
+                  <li><a href="javascript:void(0)">단체가 후원</a></li>
+                  <li><a href="javascript:void(0)">후원자 참여</a></li>
+                  <li><a href="javascript:void(0)">어린이 참여</a></li>
+                </ul>
+              </li>
+              <li>
+                <a class="mainMenu" href="aboutunicef.html">유니세프 소개</a>
+                <ul class="subMenu">
+                  <li><a href="aboutunicef.html">유니세프</a></li>
+                  <li><a href="javascript:void(0)">투명한 유니세프</a></li>
+                  <li><a href="people.html">유니세프와 사람들</a></li>
+                </ul>
+              </li>
+              <li>
+                <a class="mainMenu" href="javascript:void(0)">커뮤니티</a>
+                <ul class="subMenu">
+                  <li><a href="javascript:void(0)">캠페인</a></li>
+                  <li><a href="news.html">소식</a></li>
+                  <li><a href="javascript:void(0)">보도자료</a></li>
+                  <li><a href="javascript:void(0)">공지사항</a></li>
+                  <li><a href="javascript:void(0)">자료실</a></li>
+                  <li><a href="javascript:void(0)">채용</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <!-- 후원하기 CTA button -->
+          <a class="supportHeader" href="donate.html">후원하기</a>
+        </div>
+        <!-- 태블릿과 모바일의 햄버거 -->
+        <div class="burger"><img src="img/burger.png" alt="tastyBurger" /></div>
+        <!-- 태블릿/모바일 서브 메뉴 (메뉴 외 영역 눌러도 닫히게 할 것) -->
+        <div class="blackbg"></div>
+        <div id="menu-tb-m">
+          <div class="upperHeader-tb-m">
+            <div class="closeMenu">닫기</div>
+            <div class="utils">
+              <!-- before로 아이콘 넣어줄 것 -->
+              <a href="login.html" class="myPage tbmUpper">마이페이지</a>
+              <a href="javascript:void(0)" class="receipt tbmUpper"
+                >기부영수증</a
+              >
+              <a href="javascript:void(0)" class="faq tbmUpper">FAQ</a>
+            </div>
+          </div>
+          <div class="mainMenu-tb-m">
+            <ul>
+              <li>
+                <a href="javascript:void(0)">주요 활동</a>
+                <ul class="subMenu-tb-m">
+                  <li><a href="javascript:void(0)">활동 지역</a></li>
+                  <li><a href="javascript:void(0)">차별 없는 구호</a></li>
+                  <li><a href="javascript:void(0)">어린이 삶 개선</a></li>
+                  <li><a href="javascript:void(0)">긴급구호</a></li>
+                  <li><a href="javascript:void(0)">한국 아동권리 증진</a></li>
+                  <li><a href="javascript:void(0)">한국 정부 협력</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="javascript:void(0)">후원과 참여</a>
+                <ul class="subMenu-tb-m">
+                  <li><a href="javascript:void(0)">개인이 후원</a></li>
+                  <li><a href="javascript:void(0)">단체가 후원</a></li>
+                  <li><a href="javascript:void(0)">후원자 참여</a></li>
+                  <li><a href="javascript:void(0)">어린이 참여</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="aboutunicef.html">유니세프 소개</a>
+                <ul class="subMenu-tb-m">
+                  <li><a href="aboutunicef.html">유니세프</a></li>
+                  <li><a href="javascript:void(0)">투명한 유니세프</a></li>
+                  <li><a href="people.html">유니세프와 사람들</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="javascript:void(0)">커뮤니티</a>
+                <ul class="subMenu-tb-m">
+                  <li><a href="javascript:void(0)">캠페인</a></li>
+                  <li><a href="news.html">소식</a></li>
+                  <li><a href="javascript:void(0)">보도자료</a></li>
+                  <li><a href="javascript:void(0)">공지사항</a></li>
+                  <li><a href="javascript:void(0)">자료실</a></li>
+                  <li><a href="javascript:void(0)">채용</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- 뉴스레터 구독 -->
+    <div id="newsletter">
+      <div class="newsletterContents wrap">
+        <h3>유니세프와 함께하는 소식을 놓치지 마세요</h3>
+        <p>
+          소식 전달을 목적으로 이름, 이메일주소를 수집하며, 수신거부 시까지
+          이용·보유합니다.
+        </p>
+        <form method="post">
+          <input
+            name="readerName"
+            id="readerName"
+            type="text"
+            placeholder="이름 입력"
+          />
+          <input
+            name="readerEMail"
+            id="readerEMail"
+            type="text"
+            placeholder="이메일 입력"
+          />
+          <button class="subscribe">소식 구독하기</button>
+        </form>
+        <ul class="sns">
+          <li>
+            <a href="javascript:void(0)"
+              ><img src="img/instagram.png" alt="ig"
+            /></a>
+          </li>
+          <li>
+            <a href="javascript:void(0)"
+              ><img src="img/youtube.png" alt="yt"
+            /></a>
+          </li>
+          <li>
+            <a href="javascript:void(0)"
+              ><img src="img/facebook.png" alt="fb"
+            /></a>
+          </li>
+          <li>
+            <a href="javascript:void(0)"><img src="img/x.png" alt="x" /></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- 푸터 -->
+    <footer>
+      <div class="footerContents wrap">
+        <ul class="sns_m">
+          <li>
+            <a href="javascript:void(0)"
+              ><img src="img/instagram_m.png" alt="ig"
+            /></a>
+          </li>
+          <li>
+            <a href="javascript:void(0)"
+              ><img src="img/youtube_m.png" alt="yt"
+            /></a>
+          </li>
+          <li>
+            <a href="javascript:void(0)"
+              ><img src="img/facebook_m.png" alt="fb"
+            /></a>
+          </li>
+          <li>
+            <a href="javascript:void(0)"><img src="img/x_m.png" alt="x" /></a>
+          </li>
+        </ul>
+        <ul class="siteMenu">
+          <li><a href="javascript:void(0)">이용약관</a></li>
+          <li><a href="javascript:void(0)">개인정보처리방침</a></li>
+          <li><a href="javascript:void(0)">오시는 길</a></li>
+          <li><a href="javascript:void(0)">FAQ</a></li>
+          <li><a href="javascript:void(0)">사이트맵</a></li>
+        </ul>
+        <div class="call1">후원문의 02.737.1004</div>
+        <div class="call2">공익제보</div>
+        <div class="info1">사단법인 유니세프한국위원회 대표자 : 정갑영</div>
+        <div class="info2">고유번호 : 102-82-07606</div>
+        <div class="info3">[04099] 서울시 마포구 서강로 60 (창전동)</div>
+        <div class="copy">
+          COPYRIGHT @ THE KOREAN COMMITTEE FOR UNICEF. ALL RIGHT RESERVED
+        </div>
+        <a class="goTop" href="javascript:void(0)">
+          <div class="tarrow">tarrow</div>
+          <div class="top">TOP</div>
+        </a>
+      </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="js/common.js"></script>
+  </body>
+</html>
