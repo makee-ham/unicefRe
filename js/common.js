@@ -9,6 +9,7 @@ $(document).ready(function () {
     const windowWidth = $(window).width(); // 현재 뷰포트 너비 확인하기
 
     if (windowWidth > 1258) {
+      $("body").css("padding-top", 0);
       // PC 버전: body padding 변경 없음
       if (currentScrollTop > lastScrollTop) {
         $upperHeader.stop().slideUp(300);
