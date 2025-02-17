@@ -227,6 +227,13 @@
 .uniCastersContainer {
   margin-top: 50px;
   margin-bottom: 100px;
+  width: 1140px;
+  height: 400px;
+}
+.ucCard {
+  width: 300px;
+  height: 400px;
+  border-radius: 15px;
 }
 /* 파트너 */
 .uniPartners {

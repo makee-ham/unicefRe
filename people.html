@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="css/people.css" />
     <!-- jquery CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
   <body>
     <!-- 공통 헤더 -->
@@ -285,7 +291,7 @@
         <h2 class="articleTitle wrap">유니캐스터</h2>
         <img class="sectionBar" src="img/section_bar.png" />
       </div>
-      <div class="uniCastersContainer wrap swiper-container">
+      <div id="cardFlip" class="uniCastersContainer wrap swiper-container">
         <div class="uniCasters swiper-wrapper">
           <div class="ucCard swiper-slide flip1">
             <div class="flipInner">
@@ -455,5 +461,6 @@
 
     <!-- JS -->
     <script src="js/common.js"></script>
+    <script src="js/sub.js"></script>
   </body>
 </html>
