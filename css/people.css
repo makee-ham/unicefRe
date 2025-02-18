@@ -229,11 +229,66 @@
   margin-bottom: 100px;
   width: 1140px;
   height: 400px;
+  display: flex;
+  justify-content: space-between;
 }
 .ucCard {
+  background-color: transparent;
   width: 300px;
   height: 400px;
   border-radius: 15px;
+  perspective: 1000px;
+}
+.flipInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.ucCard:hover .flipInner {
+  transform: rotateY(180deg);
+}
+.frontFace,
+.backFace {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  border-radius: 15px;
+}
+.frontFace {
+  background-color: #fff;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.frontFace p {
+  width: 270px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: #fff;
+  border: 1px solid #2caeff;
+  text-align: center;
+  line-height: 50px;
+  font-family: "Freesentation-7Bold", sans-serif;
+  font-size: 20px;
+  color: #2caeff;
+}
+.backFace {
+  background-color: #e8f4fb;
+  font-family: "Freesentation-7Bold", sans-serif;
+  font-size: 20px;
+  line-height: 180%;
+  padding: 0 23px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(180deg);
 }
 /* 파트너 */
 .uniPartners {

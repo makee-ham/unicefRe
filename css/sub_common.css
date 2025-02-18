@@ -4,6 +4,7 @@
   display: inline-block;
   display: flex;
   justify-content: flex-end;
+  margin-top: 50px;
 }
 .siteMap li {
   font-size: 12px;
@@ -17,6 +18,13 @@
 .siteMap li:last-of-type:after {
   content: "";
   display: none;
+}
+/* 섹션 구분선 */
+.sectionBar {
+  width: 32vw;
+  height: 3px;
+  background-color: #2caeff;
+  margin-top: 10px;
 }
 
 @media all and (min-width: 830px) and (max-width: 1258px) {

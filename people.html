@@ -10,12 +10,6 @@
     <link rel="stylesheet" href="css/people.css" />
     <!-- jquery CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- swiper -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
   <body>
     <!-- 공통 헤더 -->
@@ -68,7 +62,7 @@
                 </ul>
               </li>
               <li>
-                <a class="mainMenu" href="javascript:void(0)">커뮤니티</a>
+                <a class="mainMenu" href="news.html">커뮤니티</a>
                 <ul class="subMenu">
                   <li><a href="javascript:void(0)">캠페인</a></li>
                   <li><a href="news.html">소식</a></li>
@@ -130,7 +124,7 @@
                 </ul>
               </li>
               <li>
-                <a href="javascript:void(0)">커뮤니티</a>
+                <a href="news.html">커뮤니티</a>
                 <ul class="subMenu-tb-m">
                   <li><a href="javascript:void(0)">캠페인</a></li>
                   <li><a href="news.html">소식</a></li>
@@ -150,13 +144,13 @@
       <!-- 사이트맵 -->
       <ul class="siteMap wrap">
         <li><a href="index.html">HOME</a></li>
-        <li><a href="javascript:void(0)">유니세프 소개</a></li>
+        <li><a href="aboutunicef.html">유니세프 소개</a></li>
         <li><a href="people.html">유니세프와 사람들</a></li>
       </ul>
       <!-- 함께하는 친선대사 -->
       <div class="subSectionTitle">
         <h2 class="articleTitle wrap">함께하는 친선대사</h2>
-        <img class="sectionBar" src="img/section_bar.png" />
+        <div class="sectionBar"></div>
       </div>
       <div class="mainAmbassodors wrap">
         <p>
@@ -249,7 +243,7 @@
       <!-- 글로벌 친선대사 -->
       <div class="subSectionTitle">
         <h2 class="articleTitle wrap">글로벌 친선대사</h2>
-        <img class="sectionBar" src="img/section_bar.png" />
+        <div class="sectionBar"></div>
       </div>
       <div class="globalAmbassodors wrap">
         <div class="gaContainer ga1">
@@ -289,55 +283,52 @@
       <!-- 유니캐스터 -->
       <div class="subSectionTitle">
         <h2 class="articleTitle wrap">유니캐스터</h2>
-        <img class="sectionBar" src="img/section_bar.png" />
+        <div class="sectionBar"></div>
       </div>
-      <div id="cardFlip" class="uniCastersContainer wrap swiper-container">
-        <div class="uniCasters swiper-wrapper">
-          <div class="ucCard swiper-slide flip1">
-            <div class="flipInner">
-              <div class="frontFace">
-                <div>
-                  <img src="img/sub/cast1.png" alt="faker" />
-                </div>
-                <p>프로게이머 '페이커' 이상혁</p>
+      <div id="cardFlip" class="uniCastersContainer wrap">
+        <div class="ucCard flip1">
+          <div class="flipInner">
+            <div class="frontFace">
+              <div>
+                <img src="img/sub/cast1.png" alt="faker" />
               </div>
-              <div class="backFace">
-                e스포츠를 통해 전 세계에 용기와 단합의 가치를 알리고 있는
-                프로게이머 '페이커' 이상혁 선수는 전 세계 모든 어린이의 공평한
-                교육과 건강한 성장을 지원하기 위해 선한 영향력을 펼치고
-                있습니다.
-              </div>
+              <p>프로게이머 '페이커' 이상혁</p>
+            </div>
+            <div class="backFace">
+              e스포츠를 통해 전 세계에 용기와 단합의 가치를 알리고 있는
+              프로게이머 '페이커' 이상혁 선수는 전 세계 모든 어린이의 공평한
+              교육과 건강한 성장을 지원하기 위해 선한 영향력을 펼치고 있습니다.
             </div>
           </div>
-          <div class="ucCard swiper-slide flip2">
-            <div class="flipInner">
-              <div class="frontFace">
-                <div>
-                  <img src="img/sub/cast2.png" alt="drfriends" />
-                </div>
-                <p>의학 전문 크리에이터 닥터프렌즈</p>
+        </div>
+        <div class="ucCard flip2">
+          <div class="flipInner">
+            <div class="frontFace">
+              <div>
+                <img src="img/sub/cast2.png" alt="drfriends" />
               </div>
-              <div class="backFace">
-                의학 전문 크리에이터 닥터프렌즈는 전 세계 어린이가 건강하길
-                바라는 마음을 담아 의학 전문 지식 기반 정보를 소개하고,
-                닥터프렌즈 패키지를 마련하는 등 대중 참여를 독려하고 있습니다.
-              </div>
+              <p>의학 전문 크리에이터 닥터프렌즈</p>
+            </div>
+            <div class="backFace">
+              의학 전문 크리에이터 닥터프렌즈는 전 세계 어린이가 건강하길 바라는
+              마음을 담아 의학 전문 지식 기반 정보를 소개하고, 닥터프렌즈
+              패키지를 마련하는 등 대중 참여를 독려하고 있습니다.
             </div>
           </div>
-          <div class="ucCard swiper-slide flip1">
-            <div class="flipInner">
-              <div class="frontFace">
-                <div>
-                  <img src="img/sub/cast3.png" alt="pw" />
-                </div>
-                <p>청년 크리에이터 박위</p>
+        </div>
+        <div class="ucCard flip3">
+          <div class="flipInner">
+            <div class="frontFace">
+              <div>
+                <img src="img/sub/cast3.png" alt="pw" />
               </div>
-              <div class="backFace">
-                전신마비 판정을 받은 후 강인한 의지로 재활에 성공한 청년
-                크리에이터 박위는 빈곤, 전쟁, 차별 등 다양한 어려움을 겪는
-                어린이의 실상을 널리 알리고 따뜻한 관심과 지원을 독려하고
-                있습니다.
-              </div>
+              <p>청년 크리에이터 박위</p>
+            </div>
+            <div class="backFace">
+              전신마비 판정을 받은 후 강인한 의지로 재활에 성공한 청년
+              크리에이터 박위는 빈곤, 전쟁, 차별 등 다양한 어려움을 겪는
+              어린이의 실상을 널리 알리고 따뜻한 관심과 지원을 독려하고
+              있습니다.
             </div>
           </div>
         </div>
@@ -345,7 +336,7 @@
       <!-- 유니세프의 파트너 -->
       <div class="subSectionTitle">
         <h2 class="articleTitle wrap">유니세프의 파트너</h2>
-        <img class="sectionBar" src="img/section_bar.png" />
+        <div class="sectionBar"></div>
       </div>
       <div class="uniPartners">
         <div class="bgline bgline2"></div>

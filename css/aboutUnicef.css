@@ -1,0 +1,219 @@
+/* 유니세프 */
+#unicef {
+  width: 100%;
+  height: 735px;
+  margin-top: 5px;
+  margin-bottom: 140px;
+  overflow: hidden;
+  position: relative;
+}
+#unicef .detailBarLeft {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding-right: 76px;
+}
+#unicef .detailBarRight {
+  width: 80vw;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding-left: 278px;
+  margin-top: 140px;
+}
+.detailBarLeft {
+  width: 65vw;
+  height: 270px;
+  border-radius: 0 15px 15px 0;
+  box-shadow: 5px 5px 20px -7px rgba(0, 0, 0, 0.25);
+  float: left;
+  position: relative;
+}
+.detailBarLeft:after {
+  content: "";
+  clear: both;
+}
+.detailBarRight {
+  width: 65vw;
+  height: 270px;
+  border-radius: 15px 0 0 15px;
+  box-shadow: 5px 5px 20px -7px rgba(0, 0, 0, 0.25);
+  float: right;
+  position: relative;
+}
+.detailBarRight:after {
+  content: "";
+  clear: both;
+}
+.blueBar {
+  background-color: #e8f4fb;
+}
+.whteBar {
+  background-color: #fff;
+}
+.upperBar {
+  z-index: 10;
+}
+.bottomBar {
+  z-index: -10;
+}
+#unicef p {
+  font-size: 2vmin;
+  line-height: 140%;
+}
+#intro1 {
+  width: 644px;
+  height: 440px;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 150px;
+}
+#intro2 {
+  width: 583px;
+  height: 398px;
+  z-index: 0;
+  position: absolute;
+  top: 252px;
+  left: 0;
+}
+/* 무엇이 다른가요 */
+#difference {
+  width: 100%;
+  height: calc(2115px + 205px + 10px);
+  overflow: hidden;
+  padding-top: 205px;
+  padding-bottom: 10px;
+}
+.barImage {
+  width: 520px;
+  height: 360px;
+  border-radius: 15px;
+  overflow: hidden;
+  position: absolute;
+}
+#difference .detailBarLeft {
+  margin-top: 160px;
+  margin-bottom: 160px;
+  padding-right: 300px;
+}
+#difference .detailBarRight {
+  padding-left: 300px;
+}
+#difference .detailBarRight .barImage {
+  bottom: 35px;
+  left: -280px;
+}
+#difference .detailBarLeft .barImage {
+  bottom: 35px;
+  right: -280px;
+}
+#difference .detailBarLeft .barTitle {
+  font-family: "Freesentation-7Bold", sans-serif;
+  font-size: 32px;
+  text-align: right;
+  margin-top: 55px;
+  margin-bottom: 20px;
+}
+#difference .detailBarLeft .barDesc {
+  font-size: 20px;
+  line-height: 160%;
+  text-align: right;
+}
+#difference .detailBarRight .barTitle {
+  font-family: "Freesentation-7Bold", sans-serif;
+  font-size: 32px;
+  margin-top: 55px;
+  margin-bottom: 20px;
+}
+#difference .detailBarRight .barDesc {
+  font-size: 20px;
+  line-height: 160%;
+}
+#whatWeDo > p {
+  width: 1217px;
+  height: 56px;
+  font-size: 20px;
+  margin: 30px auto 40px;
+  line-height: 140%;
+}
+.doCardsContainer {
+  width: 1140px;
+  height: 1180px;
+  margin: 0 auto 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.doCardsLine1,
+.doCardsLine3 {
+  width: 1140px;
+  height: 360px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.doCardsLine2 {
+  width: 735px;
+  height: 360px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.doCards {
+  width: 330px;
+  height: 360px;
+  background-color: #fff;
+  box-shadow: 5px 5px 20px -7px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  overflow: hidden;
+  padding-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+.doCards:hover .viewMore {
+  opacity: 1;
+  visibility: visible;
+}
+.doCards p {
+  font-size: 24px;
+  color: #000;
+}
+.doCards h4 {
+  font-family: "Freesentation-7Bold", sans-serif;
+  font-size: 32px;
+  color: #2caeff;
+}
+.doCards img {
+  display: block;
+  width: 180px;
+  height: 180px;
+  margin-top: 43px;
+}
+.doCardsLine3 img {
+  margin-top: 73px;
+}
+.viewMore {
+  width: 330px;
+  height: 360px;
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Freesentation-7Bold", sans-serif;
+  font-size: 32px;
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
