@@ -151,6 +151,34 @@
       <h2 class="articleTitle wrap">소식</h2>
       <div class="sectionBar"></div>
     </div>
+    <div class="container wrap">
+      <div class="board">
+        <div class="boardTop">
+          <!-- 탭 메뉴 -->
+          <ul class="tabs">
+            <li id="all" class="all tab active">전체보기</li>
+            <li id="news" class="news tab">뉴스</li>
+            <li id="story" class="story tab">스토리</li>
+            <li id="state" class="state tab">성명</li>
+            <li id="participate" class="participate tab">후원자참여</li>
+            <li id="interview" class="interview tab">인터뷰</li>
+          </ul>
+          <!-- 검색 바 -->
+          <input id="boardSearch" name="boardSearch" type="text" />
+        </div>
+        <div class="boardContents">
+          <!-- 게시글 위치 -->
+        </div>
+      </div>
+      <!-- 페이지 블럭 -->
+      <div class="pagination">
+        <button class="before_move" onclick="before()"></button>
+        <div class="block">
+          <!-- 페이지 블럭 위치 -->
+        </div>
+        <button class="next_move" onclick="next()"></button>
+      </div>
+    </div>
     <!-- 뉴스레터 구독 -->
     <div id="newsletter">
       <div class="newsletterContents wrap">
@@ -243,5 +271,6 @@
 
     <!-- JS -->
     <script src="js/common.js"></script>
+    <script src="js/news.js"></script>
   </body>
 </html>
