@@ -87,6 +87,7 @@ $(document).ready(function () {
     board.style.transition = "none"; // 드래그 중에는 애니메이션 비활성화
     board.style.cursor = "grabbing";
     dragDistance = 0; // 드래그 거리 초기화
+    event.preventDefault();
   }
 
   // 드래그 중
@@ -122,7 +123,7 @@ $(document).ready(function () {
     // 드래그가 아닌 경우에만 링크 클릭 허용
     if (Math.abs(dragDistance) < 5) {
       // ^ 절대값
-      const targetLink = event.target.closest(".recoCircle"); // 클릭된 요소가 링크인지 확인
+      const targetLink = event.target.closest(".campaignCard"); // 클릭된 요소가 링크인지 확인
       if (targetLink) {
         window.location.href = targetLink.href; // 링크로 이동
       }
