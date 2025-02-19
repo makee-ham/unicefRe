@@ -40,13 +40,26 @@
   color: #fff;
   border: none;
 }
+.searchBar {
+  width: 200px;
+  height: 30px;
+  position: relative;
+}
+.searchIcon {
+  width: 30px;
+  height: 30px;
+  background: url("../img/sub/search.png") no-repeat center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 #boardSearch {
   width: 200px;
   height: 30px;
   border: 1px solid #2caeff;
   outline: none;
   border-radius: 15px;
-  padding: 0 20px;
+  padding: 0 30px;
 }
 .boardContents {
   width: 1190px;
@@ -57,6 +70,10 @@
   flex-wrap: wrap;
 }
 /* js로 오는 자식들... */
+.no-posts {
+  font-size: 16px;
+  margin: 0 auto;
+}
 .post-card {
   width: 350px;
   height: 380px;

@@ -1,8 +1,8 @@
 // 게시판을 만들어보자
-const totalContents = 90;
+let totalContents = 90;
 const page_num = 6;
 const block_num = 5;
-const total_block = Math.ceil(totalContents / page_num);
+let total_block = Math.ceil(totalContents / page_num);
 let current_block = 1;
 let current_block_group =
   Math.floor((current_block - 1) / block_num) * block_num + 1;
@@ -70,23 +70,17 @@ data[84] = {
 
 //////////////////////////////
 
-// 탭 클릭 이벤트 설정
-function setupTabs() {
-  document.querySelectorAll(".tab").forEach((tab) => {
-    tab.addEventListener("click", (e) => {
-      currentCategory = e.target.id;
-      post_data_print(current_block);
-      updateActiveTab(e.target);
-    });
-  });
-}
-
-// 활성화된 탭 업데이트
-function updateActiveTab(activeTab) {
-  document
-    .querySelectorAll(".tab")
-    .forEach((tab) => tab.classList.remove("active"));
-  activeTab.classList.add("active");
+// totalContents & total_block 업데이트
+function updateTotal() {
+  if (currentCategory === "all") {
+    totalContents = data.length;
+  } else {
+    totalContents = data.filter((item) =>
+      item.category.includes(currentCategory)
+    ).length;
+  }
+  total_block = Math.ceil(totalContents / page_num);
+  current_block = 1;
 }
 
 // 게시물 출력 함수
@@ -94,31 +88,43 @@ function post_data_print(block) {
   let board = document.querySelector(".boardContents");
   board.innerHTML = ""; // 기존 게시물 초기화
 
-  let start = totalContents - 1 - page_num * (block - 1);
+  let filteredData =
+    currentCategory === "all"
+      ? data
+      : data.filter((item) => item.category.includes(currentCategory));
 
-  for (let i = start; i > start - page_num; i--) {
-    if (i < 0) break;
+  if (filteredData.length === 0) {
+    // 게시물이 없는 경우 처리
+    board.innerHTML = `<p class="no-posts">게시물이 없습니다.</p>`;
+    document.querySelector(".pagination").style.display = "none";
+    return;
+  } else {
+    document.querySelector(".pagination").style.display = "flex"; // 페이지 블록 보이기
+  }
 
-    // 카테고리 필터링
-    let postCategory = data[i].category?.[1];
-    if (currentCategory !== "all" && postCategory !== currentCategory) continue;
+  let totalFilteredContents = filteredData.length;
+  let start = Math.max(0, totalFilteredContents - 1 - page_num * (block - 1));
+  let end = Math.max(0, start - page_num + 1); // 음수 방지
 
+  for (let i = start; i >= end; i--) {
     let postCard = document.createElement("div");
     postCard.className = "post-card";
     postCard.innerHTML = `
-      <p class="post-category">${data[i].category?.[2] || "카테고리 없음"}</p>
+      <p class="post-category">${
+        filteredData[i].category?.[2] || "카테고리 없음"
+      }</p>
       <div class="post-image">
         <img src="${
-          data[i].image || "img/sub/noimage.png"
+          filteredData[i].image || "img/sub/noimage.png"
         }" alt="게시물 이미지">
       </div>
       <div class="post-content">
-        <p class="post-date">${data[i].date || "날짜 없음"}</p>
-        <h3 class="post-title">${data[i].title || "제목 없음"}</h3>
+        <p class="post-date">${filteredData[i].date || "날짜 없음"}</p>
+        <h3 class="post-title">${filteredData[i].title || "제목 없음"}</h3>
         <div class="tagsContainer">
           ${
-            data[i].tags
-              ? data[i].tags
+            filteredData[i].tags
+              ? filteredData[i].tags
                   .map((tag) => `<p class="post-tags">${tag}</p>`)
                   .join("")
               : ""
@@ -134,6 +140,20 @@ function post_data_print(block) {
 // 블록 출력하기
 // 파라미터: 가장 앞에 오는 블록
 function block_print(front_block) {
+  let block_box = document.querySelector(".block");
+  let pagination = document.querySelector(".pagination");
+  block_box.replaceChildren(); // 기존 블록 초기화
+
+  if (totalContents === 0) {
+    // 게시물이 없으면 블록 숨기기
+    block_box.style.display = "none";
+    pagination.style.display = "none";
+    return;
+  } else {
+    block_box.style.display = "flex"; // 블록 보이기
+    pagination.style.display = "flex";
+  }
+
   if (front_block < 1) front_block = 1;
   if (front_block > total_block) front_block = total_block;
 
@@ -144,10 +164,6 @@ function block_print(front_block) {
   // 다음 버튼 비활성화
   document.querySelector(".next_move").style.visibility =
     front_block + block_num > total_block ? "hidden" : "visible";
-
-  // 블록을 추가할 공간
-  let block_box = document.querySelector(".block");
-  block_box.replaceChildren();
 
   // 블록 생성
   for (
@@ -186,6 +202,14 @@ function updateActiveButton(activeBlock) {
   current_block = activeBlock;
 }
 
+// 활성화된 탭 업데이트
+function updateActiveTab(activeTab) {
+  document
+    .querySelectorAll(".tab")
+    .forEach((tab) => tab.classList.remove("active"));
+  activeTab.classList.add("active");
+}
+
 function before() {
   let current_block_group =
     Math.floor((current_block - 1) / block_num) * block_num + 1;
@@ -204,16 +228,27 @@ function next() {
   updateActiveButton(newBlock);
 }
 
+// 탭 변경 이벤트
+function setupTabs() {
+  document.querySelectorAll(".tab").forEach((tab) => {
+    tab.addEventListener("click", (e) => {
+      currentCategory = e.target.id;
+      updateTotal();
+      post_data_print(1);
+      block_print(1);
+      updateActiveTab(e.target);
+    });
+  });
+}
+
 // 화면 로드 시 실행되는 이벤트
 window.onload = function () {
   // 탭 셋업
   setupTabs();
   // 게시글 데이터 출력
   post_data_print(1);
+  updateTotal();
   // 블록 출력
   block_print(1);
   updateActiveButton(1);
 };
-
-///////////////////////////////////////
-///////////////////////////////////////
