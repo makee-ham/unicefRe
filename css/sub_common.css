@@ -28,6 +28,13 @@
 }
 
 @media all and (min-width: 830px) and (max-width: 1258px) {
+  /* 사이트맵 */
+  .siteMap {
+    padding-right: 60px;
+  }
+  /* 섹션 구분선 */
+  .sectionBar {
+  }
 }
 
 @media all and (max-width: 829.5px) {

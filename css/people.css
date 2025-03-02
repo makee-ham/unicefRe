@@ -354,3 +354,7 @@
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
+
+/* 태블릿 버전 */
+@media all and (min-width: 830px) and (max-width: 1258px) {
+}
